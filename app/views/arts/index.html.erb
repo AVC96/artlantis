@@ -6,6 +6,24 @@
   <% end %>
 </ul>
 
-
-<div>
-</div>
+<%# build home page - then build index page for the art and then the show page/ favourites %>
+<%# ERB  %>
+ <html>
+  <div class="container">
+    <head>
+      <meta charset="utf-8">
+      <title>Artlantis | Art rental platform</title>
+    </head>
+  </div>
+    <div class="art-container">
+      <% @arts.each do |art| %>
+        <div class="art-border-container">
+          <img src="logo.png" alt="Art 1">
+          <img src="logo.png" alt="Art 2">
+          <div class="art_text">
+            <h3><%= art.description %></h3>
+            <h3><%= art.cost %></h3>
+          </div>
+        </div>
+      <% end %>
+    </div>
