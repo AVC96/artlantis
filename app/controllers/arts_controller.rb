@@ -12,19 +12,8 @@ class ArtsController < ApplicationController
   end
 
   def create
-    @art = Restaurant.new(art_params)
+    @art = Art.new(art_params)
     @art.save
-    redirect_to art_path(@art)
-  end
-
-  def edit
-    @art = Art.find(params[:id])
-  end
-
-  def update
-    @art = Art.find(params[:id])
-    @art.update(art_params)
-
     redirect_to art_path(@art)
   end
 

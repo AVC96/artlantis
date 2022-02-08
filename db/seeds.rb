@@ -8,3 +8,4 @@ Art.create!(cost: 10, location: "London", description: "molly's artwork", user_i
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# molly made a change
