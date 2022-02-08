@@ -6,16 +6,14 @@
     </head>
   </div>
     <div class="show-container">
-      <% @art = Art.find(params[:id]) %>
         <div class="art-border-container">
           <img src="logo.png" alt="Art 1">
           <div class="art_text">
-            <h3><%= art.description %></h3>
-            <h3><%= art.type %></h3>
-            <h3><%= art.location %></h3>
-            <h3><%= art.image %></h3>
-            <h3><%= art.cost %></h3>
+            <h3><%= @art.description %></h3>
+            <h3><%= @art.type %></h3>
+            <h3><%= @art.location %></h3>
+            <h3><%= @art.image %></h3>
+            <h3><%= @art.cost %></h3>
           </div>
         </div>
-      <% end %>
     </div>

@@ -1,0 +1,19 @@
+<html>
+  <div class="container">
+    <head>
+      <meta charset="utf-8">
+      <title>Artlantis | Art rental platform</title>
+    </head>
+  </div>
+    <div class="art-container">
+      <% @favourites = Favourites.all %>
+        <div class="art-border-container">
+          <img src="logo.png" alt="Art 1">
+          <img src="logo.png" alt="Art 2">
+          <div class="art_text">
+            <h3><%= art.description %></h3>
+            <h3><%= art.cost %></h3>
+          </div>
+        </div>
+      <% end %>
+    </div>
