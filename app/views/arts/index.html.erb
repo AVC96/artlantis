@@ -16,8 +16,12 @@
     <div class="art-container">
       <% @arts.each do |art| %>
         <div class="art-border-container">
-          <img src="logo.png" alt="Art 1">
-          <img src="logo.png" alt="Art 2">
+        <%= image_tag "art 1"%>
+        <%= image_tag "art 2"%>
+        <%= image_tag "art 3"%>
+          <img src="art 1.jpg" alt="Art 1">
+          <img src="art 2.jpg" alt="Art 2">
+          <img src="art 3.jpg" alt="Art 2">
           <div class="art_text">
             <h3><%= art.description %></h3>
             <h3><%= art.cost %></h3>
