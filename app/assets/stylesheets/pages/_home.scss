@@ -29,3 +29,29 @@ button:hover{
   box-shadow: 2px 2px #0e1b1b;
   transform:translate(2px,2px);
 }
+
+.footer {
+  text-align:left;
+  font-size:small;
+  padding: 30px;
+  background-color: lightblue;
+}
+
+.footer a {
+  font-size: 30px;
+  color:  #1EDD88;
+}
+
+.footer p {
+  color: whitesmoke;
+}
+
+footer .fas {
+  color: #BF0F12;
+}
+
+h3 {
+  font-size: small;
+  font-weight: bold;
+  color:darkmagenta;
+}
