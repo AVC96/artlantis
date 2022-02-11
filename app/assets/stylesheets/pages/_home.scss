@@ -19,6 +19,14 @@ button:hover{
   box-shadow: 2px 2px black;
 }
 
+.title_box{
+  padding: 10px;
+  margin: 50px 10px 10px;
+}
+
+.simple_text{
+  margin: 80px 10px 10px;
+}
 
 .social_links {
   background-color: #0e1b1b;
@@ -49,6 +57,9 @@ button:hover{
 
 footer .fas {
   color: #BF0F12;
+}
+h2, body, p, h3, h4, h5 {
+  font-family: 'Roboto', sans-serif;
 }
 
 h3 {

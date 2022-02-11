@@ -1,7 +1,7 @@
 
 <%# build home page - then build index page for the art and then the show page/ favourites %>
 <%# ERB  %>
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -13,24 +13,30 @@
     <%= stylesheet_link_tag "application", media: "all" %>
   </head>
   <body>
+
     <div class="art-container">
       <% @arts.each do |art| %>
         <div class="row">
           <div class="column">
             <%= image_tag "art_1.jpg" %>
           </div>
+
           <div class="column">
             <%= image_tag "art_2.jpg" %>
           </div>
+
           <div class="column">
             <%= image_tag "art_3.jpg" %>
           </div>
+
           <div class="art_text">
             <h3><%= art.description %></h3>
             <h3><%= art.cost %></h3>
           </div>
+
         </div>
       <% end %>
     </div>
+
   </body>
 </html>

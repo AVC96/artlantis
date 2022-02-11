@@ -13,7 +13,8 @@ class FavouritesController < ApplicationController
   end
 
   private
- def find_favourite
+
+  def find_favourite
     @favourite = Favourite.find(params[:id])
   end
 
