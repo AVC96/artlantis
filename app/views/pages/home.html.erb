@@ -1,11 +1,50 @@
+<html>
 
-  <div class="banner d-flex justify-content-center flex-column">
-    <div class="container justify-content-center d-flex flex-column text-center">
-      <%= image_tag "background.jpeg", alt: "Le Wagon", class:"rounded mx-auto d-block img-fluid w-80" %>
-      <h1>Welcome to Artlantis</h1>
-      <p>Artlantis brings not so well known artwork into the spotlight!</p>
-      <a href="#" class="btn-primay">Browse Artlantis!</a>
+  <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheets" href="css/button.css">
+  </head>
+
+  <body>
+    <div class="banner d-flex justify-content-center flex-column">
+      <div class="container justify-content-center d-flex flex-column text-center">
+        <%= image_tag "background.jpeg", alt: "Le Wagon", class:"rounded mx-auto d-block img-fluid w-80" %>
+          <h1>Welcome to Artlantis</h1>
+
+          <div class="simple_text">
+            <p>A world bridging art lovers and not so well known artwork into the spotlight! On Artlantis you can like and collect your favourite digital art piece. With the potential of connecting with the artists.</p>
+          </div>
+
+          <div class="browse_box">
+            <form method="get" action="https://google.com">
+              <button type="Browse Artlantis!">Browse Artlantis!</button>
+            </form>
+          </div>
+      </div>
     </div>
-  </div>
 
-class
+    <div class="social_links">
+      <h3>
+        Find us on the socials
+      </h3>
+      <ul>
+        <li>
+          <a href="https://www.twitter.com/audreyhandem" target="_blank">
+            <i class="fab fa-twitter"></i>
+            <!-- target ="blank" opens a new tab with the href -->
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/audreyhandem" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </li>
+
+        <li>
+          <a href="https://www.instagram.com/audreyhandem" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

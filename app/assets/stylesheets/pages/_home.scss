@@ -1,2 +1,31 @@
 // Specific CSS for your home-page
 
+button{
+  width: 5cm;
+  font-family: sans-serif;
+  font-weight: bold;
+  color:black;
+  box-shadow: 2px 2px black;
+  height: 1.2cm;
+  background-color: #C9E3E4;
+}
+
+button:active{
+transform:translate(1px,1px);
+}
+
+button:hover{
+  background-color: #a178e4;
+  box-shadow: 2px 2px black;
+}
+
+
+.social_links {
+  background-color: #0e1b1b;
+  margin: 100px 20px 20px;
+  display: inline-flex;
+  padding: 30px;
+  border: 1px solid #0e1b1b;
+  box-shadow: 2px 2px #0e1b1b;
+  transform:translate(2px,2px);
+}
