@@ -2,6 +2,7 @@
 
 button{
   width: 5cm;
+  margin: 80px;
   font-family: sans-serif;
   font-weight: bold;
   color:black;
@@ -33,6 +34,7 @@ button:hover{
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   padding: 16px;
+  height: 400px;
 }
 
 .social_links {
@@ -49,7 +51,7 @@ button:hover{
   text-align:left;
   font-size:small;
   padding: 10px;
-  margin: 500px 10px 30px;
+  margin: 250px 10px 30px;
   background-color: lightblue;
 }
 
