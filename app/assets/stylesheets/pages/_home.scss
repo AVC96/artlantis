@@ -28,6 +28,13 @@ button:hover{
   margin: 80px 10px 10px;
 }
 
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+}
+
 .social_links {
   background-color: #0e1b1b;
   margin: 50px 10px 10px;

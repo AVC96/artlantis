@@ -7,19 +7,22 @@
       <title>Artlantis | Art rental platform</title>
     </head>
   </div>
-
-  <div class="art-container">
-    <% @favourites = Favourites.all %>
-      <div class="art-border-container">
-        <img src="art_2.jpg" alt="Art 1">
-        <img src="art_3.jpg" alt="Art 2">
-
-        <div class="art_text">
-          <h3><%= art.description %></h3>
-          <h3><%= art.cost %></h3>
+  <body>
+    <div class="art-container">
+      <% @favourites = Favourites.all %>
+        <div class="art-border-container">
+          <img src="art_2.jpg" alt="Art 1">
+          <img src="art_3.jpg" alt="Art 2">
+          <div class="art_text">
+            <h3><%= art.description %></h3>
+            <h3><%= art.cost %></h3>
+          </div>
         </div>
-      </div>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
+  </body>
+
+  <%# Map card %>
+  <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoiYXZjOTYiLCJhIjoiY2t6aXpibmgyMDFvMTJubnoyN21pNm9jYiJ9.7NT4bLuxGk6ZpEznY7_cIg'>
 
 </html>
