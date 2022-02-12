@@ -3,5 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :arts
 
+  # root for favourites?
+  # devise for :user
+  # root to: 'favourites#index'
+  # resources :arts
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
