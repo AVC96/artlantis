@@ -40,3 +40,16 @@ h2 {
   clear: both;
   display: table;
 }
+
+.art_text {
+  text-align: center;
+}
+
+.art-container {
+  display: flex;
+}
+
+.art-container img {
+  height: 450px;
+  width: 300px;
+}
