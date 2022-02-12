@@ -2,6 +2,7 @@
 
 button{
   width: 5cm;
+  margin: 80px;
   font-family: sans-serif;
   font-weight: bold;
   color:black;
@@ -19,13 +20,59 @@ button:hover{
   box-shadow: 2px 2px black;
 }
 
+.title_box{
+  padding: 10px;
+  margin: 50px 10px 10px;
+}
+
+.simple_text{
+  margin: 80px 10px 10px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+  height: 400px;
+}
 
 .social_links {
   background-color: #0e1b1b;
-  margin: 100px 20px 20px;
+  margin: 50px 10px 10px;
   display: inline-flex;
-  padding: 30px;
+  padding: 10px;
   border: 1px solid #0e1b1b;
   box-shadow: 2px 2px #0e1b1b;
   transform:translate(2px,2px);
+}
+
+.footer {
+  text-align:left;
+  font-size:small;
+  padding: 10px;
+  margin: 250px 10px 30px;
+  background-color: lightblue;
+}
+
+.footer a {
+  font-size: 30px;
+  color:  #1EDD88;
+}
+
+.footer p {
+  color: whitesmoke;
+}
+
+footer .fas {
+  color: #BF0F12;
+}
+h2, body, p, h3, h4, h5 {
+  font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+  font-size: small;
+  font-weight: bold;
+  color:darkmagenta;
 }

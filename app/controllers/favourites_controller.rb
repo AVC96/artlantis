@@ -14,6 +14,10 @@ class FavouritesController < ApplicationController
 
   private
 
+  def find_favourite
+    @favourite = Favourite.find(params[:id])
+  end
+
   def art_params
     params.require(:art).permit(:cost, :location, :type, :description, :image)
   end
