@@ -23,21 +23,21 @@
         </div>
 
         <div class="art-container">
-
            <div class="row">
+           <% count=1 %>
+
             <% @arts.each do |art| %>
               <div class="column">
-                <%= image_tag "art_1.jpg" %>
+                  <%= image_tag "art_#{count}.jpg" %>
+                <div class="art_text">
+                  <h3><%= art.description%></h3>
+                  <h3><%= art.cost%></h3>
+                </div>
               </div>
+              <% count+=1 %>
 
-
-              <div class="art_text">
-                <h3><%= art.description %></h3>
-                <h3><%= art.cost %></h3>
-              </div>
             <% end %>
             </div>
-
         </div>
 
       </div>
