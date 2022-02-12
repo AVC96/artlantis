@@ -23,53 +23,21 @@
         </div>
 
         <div class="art-container">
-
            <div class="row">
+           <% count=1 %>
+
             <% @arts.each do |art| %>
               <div class="column">
-                <%= image_tag "art_1.jpg" %>
+                  <%= image_tag "art_#{count}.jpg" %>
+                <div class="art_text">
+                  <h3><%= art.description%></h3>
+                  <h3><%= art.cost%></h3>
+                </div>
               </div>
-              <div class="column">
-                <%= image_tag "art_2.jpg" %>
-              </div>
-              <div class="column">
-                <%= image_tag "art_3.jpg" %>
-              </div>
-              <div class="column">
-                <%= image_tag "art_4.jpg" %>
-              </div>
-              <div class="column">
-                <%= image_tag "art_5.jpg" %>
-              </div>
-              <div class="column">
-                <%= image_tag "art_6.jpg" %>
-              </div>
-              <div class="column">
-                <%= image_tag "art_7.jpg" %>
-              </div>
-              <div class="column">
-                <%= image_tag "art_8.jpg" %>
-              </div>
-              <div class="column">
-                <%= image_tag "art_9.jpg" %>
-              </div>
-              <div class="column">
-                <%= image_tag "art_10.jpg" %>
-              </div>
-              <div class="column">
-                <%= image_tag "art_11.jpg" %>
-              </div>
-              <div class="column">
-                <%= image_tag "art_10.jpg" %>
-              </div>
+              <% count+=1 %>
 
-              <div class="art_text">
-                <h3><%= art.description; art.cost; art.location %></h3>
-                <%# <h3><%= art.cost %>
-              </div>
             <% end %>
             </div>
-
         </div>
 
       </div>
