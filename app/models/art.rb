@@ -10,15 +10,20 @@
 #  type        :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  user_id     :bigint
+#  artist_id   :bigint
 #
 # Indexes
 #
-#  index_arts_on_user_id  (user_id)
+#  index_arts_on_artist_id  (artist_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (artist_id => artists.id)
 #
 class Art < ApplicationRecord
   # ASSOCIATIONS
-  belongs_to :user
+  belongs_to :artist
+  has_many_attached :images
 
   # VALIDATIONS
   # WHICH FIELDS ARE REQUIRED FOR A SINGLE ARTWORK?
