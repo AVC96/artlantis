@@ -25,7 +25,7 @@ end
   artist.save!
   # CREATE 5 ARTWORKS FOR EACH ARTIST
   5.times do
-    art = Art.new(cost: rand(10..100), location: Faker::Address.full_address, description: Faker::Hipster.paragraphs[0],
+    art = Art.new(cost: rand(10..100), location: Faker::Address.city, description: Faker::Hipster.paragraph,
                   artist_id: artist.id, type: Faker::Hipster.word)
     # LOAD A RANDOM ART IMAGE FROM UNSPLASH
     image = URI.open("https://source.unsplash.com/random/640x960/?art")
