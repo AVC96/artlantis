@@ -1,47 +1,23 @@
-
-<%# ERB  %>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <%= stylesheet_link_tag "application", media: "all" %>
-    <title></title>
-  </head>
-
-
-  <body>
-    <div class="banner d-flex justify-content-center flex-column">
-      <div class="container justify-content-center d-flex flex-column text-center">
-        <%= image_tag "background.jpeg", alt: "Le Wagon", class:"rounded mx-auto d-block img-fluid w-80" %>
-
-        <div class="title_box">
-          <h1>Artlantis | Digital Art Platform</h1>
-        </div>
-
-        <div class="art-container">
-           <div class="row">
-           <% count=1 %>
-
-            <% @arts.each do |art| %>
-              <div class="column">
-                  <%= image_tag "art_#{count}.jpg" %>
-                <div class="art_text">
-                  <h3><%= art.description%></h3>
-                  <h3><%= art.cost%></h3>
-                </div>
-              </div>
-              <% count+=1 %>
-
-            <% end %>
+<div class="banner d-flex justify-content-center flex-column">
+  <div class="container justify-content-center d-flex flex-column text-center">
+    <%= image_tag "background.jpeg", alt: "Le Wagon", class:"rounded mx-auto d-block img-fluid w-80" %>
+    <div class="title_box">
+      <h1>Artlantis | Digital Art Platform</h1>
+    </div>
+    <div class="art-container">
+      <div class="row">
+        <% count=1 %>
+        <% @arts.each do |art| %>
+          <div class="column">
+            <%= image_tag "art_#{count}.jpg" %>
+            <div class="art_text">
+              <h3><%= art.description%></h3>
+              <h3><%= art.cost%></h3>
             </div>
-        </div>
-
+          </div>
+          <% count+=1 %>
+        <% end %>
       </div>
     </div>
-  </body>
-
-</html>
+  </div>
+</div>

@@ -1,25 +1,5 @@
 // Specific CSS for your home-page
 
-button {
-  width: 5cm;
-  margin: 80px;
-  font-family: sans-serif;
-  font-weight: bold;
-  color: black;
-  box-shadow: 2px 2px black;
-  height: 1.2cm;
-  background-color: #c9e3e4;
-}
-
-button:active {
-  transform: translate(1px, 1px);
-}
-
-button:hover {
-  background-color: #a178e4;
-  box-shadow: 2px 2px black;
-}
-
 .title_box {
   padding: 10px;
   margin: 50px 10px 10px;
@@ -27,40 +7,4 @@ button:hover {
 
 .simple_text {
   margin: 80px 10px 10px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  padding: 16px;
-  height: 400px;
-}
-
-.social_links {
-  background-color: #0e1b1b;
-  margin: 50px 10px 10px;
-  display: inline-flex;
-  padding: 10px;
-  border: 1px solid #0e1b1b;
-  box-shadow: 2px 2px #0e1b1b;
-  transform: translate(2px, 2px);
-}
-
-.footer {
-  padding: 10px;
-  background-color: lightblue;
-}
-
-.footer a {
-  font-size: 30px;
-  color: #1edd88;
-}
-
-.footer p {
-  color: whitesmoke;
-}
-
-footer .fas {
-  color: #bf0f12;
 }
