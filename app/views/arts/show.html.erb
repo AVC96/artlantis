@@ -6,7 +6,7 @@
     </div>
     <div class="show-container">
       <div class="art-border-container">
-        <img src="art_1.jpg" alt="Art 1">
+        <%= cl_image_tag @art.images[0].key %>
         <div class="art_text">
           <h3><%= @art.description %></h3>
           <h3><%= @art.type %></h3>

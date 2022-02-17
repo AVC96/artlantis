@@ -6,16 +6,16 @@
     </div>
     <div class="art-container">
       <div class="row">
-        <% count=1 %>
         <% @arts.each do |art| %>
-          <div class="column">
-            <%= image_tag "art_#{count}.jpg" %>
-            <div class="art_text">
-              <h3><%= art.description%></h3>
-              <h3><%= art.cost%></h3>
+          <div class="col-4">
+            <div class="m-3">
+              <%= cl_image_tag art.images[0].key, class: 'card-artwork' %>
+              <div class="art_text">
+                <p><%= art.description%></p>
+                <p>£<%= art.cost%></p>
+              </div>
             </div>
           </div>
-          <% count+=1 %>
         <% end %>
       </div>
     </div>
