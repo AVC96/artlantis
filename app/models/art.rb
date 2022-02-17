@@ -23,6 +23,8 @@
 class Art < ApplicationRecord
   # ASSOCIATIONS
   belongs_to :artist
+
+  # IMAGE ATTACHMENTS (MULTIPLE POSSIBLE WITH HAS_MANY_ATTACHED)
   has_many_attached :images
 
   # VALIDATIONS

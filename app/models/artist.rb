@@ -11,6 +11,7 @@
 #  updated_at  :datetime         not null
 #
 class Artist < ApplicationRecord
-  has_many :arts
+  has_many :arts, dependent: :destroy # DEPENDENT DESTROY MEANS WE WILL DELETE ALL ARTWORKS ASSOCIATED WITH THIS ARTIST WHEN WE DELETE THIS ARTIST
+
   has_one_attached :image
 end
