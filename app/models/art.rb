@@ -3,11 +3,11 @@
 # Table name: arts
 #
 #  id          :bigint           not null, primary key
+#  category    :string
 #  cost        :integer
 #  description :string
 #  image       :string
 #  location    :string
-#  type        :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  artist_id   :bigint
