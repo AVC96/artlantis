@@ -1,64 +1,24 @@
-<html>
-
-  <head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheets" href="css/button.css">
-  </head>
-
-  <body>
-    <div class="banner d-flex justify-content-center flex-column">
-      <div class="container justify-content-center d-flex flex-column text-center">
-        <%= image_tag "background.jpeg", alt: "Le Wagon", class:"rounded mx-auto d-block img-fluid w-80" %>
-
-          <div class="title_box">
-            <h1>Welcome to Artlantis</h1>
-          </div>
-
-          <div class="simple_text">
-            <p>A world bridging art lovers and undervalued artwork! On Artlantis you can like and collect your favourite digital art pieces. With the potential to connect with new artists.</p>
-          </div>
-
-          <div class="browse_box">
-            <form method="get" action="http://localhost:3000/arts">
-              <button type="Browse Artlantis!">Browse Artlantis!</button>
-            </form>
-          </div>
-      </div>
-    </div>
-
-  <h2>This week's top picks</h2>
+<div class="d-flex justify-content-center flex-column">
+  <%= image_tag "background.jpeg", alt: "Le Wagon", class:"rounded mx-auto d-block img-fluid w-80" %>
+  <div class="title_box">
+    <h1>Welcome to Artlantis</h1>
+  </div>
+  <div class="simple_text">
+    <p>A world bridging art lovers and undervalued artwork! On Artlantis you can like and collect your favourite digital art pieces. With the potential to connect with new artists.</p>
+  </div>
+  <div class="browse_box">
+    <form method="get" action="http://localhost:3000/arts">
+      <button type="Browse Artlantis!">Browse Artlantis!</button>
+    </form>
+  </div>
+</div>
+<h2>This week's top picks</h2>
 <%# how do I change the image? %>
-    <div class="cards">
-      <div class="card" style="background-image: url(https://res.cloudinary.com/dvqgz2ewl/image/upload/v1644672621/art_4_v9rqim.jpg)">
-      </div>
-
-      <div class="card" style="background-image: url(https://res.cloudinary.com/dvqgz2ewl/image/upload/v1644672617/art_5_qqsonx.jpg)">
-      </div>
-
-      <div class="card" style="background-image: url(https://res.cloudinary.com/dvqgz2ewl/image/upload/v1644672614/art_6_ipkqs5.jpg)">
-      </div>
-    </div>
-  </body>
-
-
-
-  <footer>
-    <div class="footer">
-      <h3>
-        Find us on the socials
-      </h3>
-      <ul>
-        <li>
-          <a href="https://www.twitter.com/audreyhandem" target="_blank">
-             <i class="fab fa-twitter"></i>
-            <!-- target ="blank" opens a new tab with the href -->
-          </a>
-          <a href="https://www.linkedin.com/audreyhandem" target="_blank">
-          <i class="fab fa-linkedin"></i>
-          <a href="https://www.instagram.com/audreyhandem" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </li>
-      </ul>
-    </div>
-  </footer>
-</html>
+<div class="cards">
+  <div class="card" style="background-image: url(https://res.cloudinary.com/dvqgz2ewl/image/upload/v1644672621/art_4_v9rqim.jpg)">
+  </div>
+  <div class="card" style="background-image: url(https://res.cloudinary.com/dvqgz2ewl/image/upload/v1644672617/art_5_qqsonx.jpg)">
+  </div>
+  <div class="card" style="background-image: url(https://res.cloudinary.com/dvqgz2ewl/image/upload/v1644672614/art_6_ipkqs5.jpg)">
+  </div>
+</div>

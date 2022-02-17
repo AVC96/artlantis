@@ -1,18 +1,24 @@
 // Import page-specific CSS files here.
-@import "home";
-@import "art";
-
+@import 'home';
+@import 'art';
 
 body {
-  text-align: center;
-  margin: 0 auto;
-  max-width: 50em;
-  color: lightblue;
-  line-height: 1.5;
-  padding: 4em 1em;
+  margin: 0;
+  font-family: Open Sans;
 }
 
-.title_box{
+h1,
+h2,
+h3,
+h4 {
+  font-family: Poppins;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title_box {
   color: lightblue;
   padding: 10px;
   margin: 50px 10px 10px;

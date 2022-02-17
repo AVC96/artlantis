@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ArtAuctionAirbnb</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Artlantis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%# All <link> tags belong here %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   </head>
-
-  <body>
-  <header>
-      <%= render 'layouts/navigation' %>
-    </header>
+  <body style="display: flex; flex-direction: column">
+    <%= render 'shared/navigation' %>
+    <main class="container">
+      <%= yield %>
+    </main>
+    <%= render 'shared/footer' %>
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <% end %>
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-    <%= yield %>
   </body>
 </html>

@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
+  # ROOT ('/') GOES TO PAGES CONTROLLER, HOME ACTION
   root to: 'pages#home'
 
-  resources :arts
+  # ROUTES FOR DEVISE (LOGIN, LOGOUT, SIGN UP)
+  devise_for :users
 
-  # root for favourites?
-  # devise for :user
-  # root to: 'favourites#index'
-  # resources :arts
+  # ROUTES FOR ARTWORKS
+  resources :arts
 end
