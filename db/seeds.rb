@@ -19,8 +19,8 @@ end
                       description: Faker::Hipster.paragraph, location: Faker::Address.city)
   # LOAD A RANDOM ART IMAGE FROM UNSPLASH
   artist_image = URI.open("https://source.unsplash.com/random/640x960/?artist")
-  # ATTACH THE IMAGE (.images instead of .image since we use
-  # has_many_attached in the model)
+  # ATTACH THE IMAGE (.image instead of .images since we use
+  # has_one_attached in the model)
   artist.image.attach(io: artist_image, filename: 'artist.jpg')
   artist.save!
   # CREATE 5 ARTWORKS FOR EACH ARTIST
