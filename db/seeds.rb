@@ -7,7 +7,7 @@ User.destroy_all
 User.create!(email: "audrey@artlantis.com", password: "123456")
 User.create!(email: "molly@artlantis.com", password: "123456")
 User.create!(email: "raj@artlantis.com", password: "123456")
-
+User.create!(email: "mollygao17@gmail.com", password: "123456")
 # CREATE 2 FAKE USERS
 2.times do
   User.create!(email: Faker::Internet.email, password: "123456")

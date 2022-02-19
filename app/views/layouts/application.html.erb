@@ -10,7 +10,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   </head>
-  <body style="display: flex; flex-direction: column">
+  <body style="display: flex; flex-direction: column" id="bootstrap-override">
     <%= render 'shared/navigation' %>
     <main class="container">
       <%= yield %>
