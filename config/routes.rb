@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   # ROUTES FOR DEVISE (LOGIN, LOGOUT, SIGN UP)
   devise_for :users
-
   # ROUTES FOR ARTWORKS
   resources :arts
 end
