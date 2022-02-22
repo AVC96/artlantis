@@ -11,8 +11,9 @@
             <div class="m-3">
               <%= cl_image_tag art.images[0].key, class: 'card-artwork' %>
               <div class="art_text">
-                <p><%= art.description%></p>
+                <p><%= art.name%></p>
                 <p>£<%= art.cost%></p>
+                <p><%= link_to "learn more", art_path(art)%></p>
               </div>
             </div>
           </div>

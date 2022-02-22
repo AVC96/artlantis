@@ -7,7 +7,7 @@ User.destroy_all
 User.create!(email: "audrey@artlantis.com", password: "123456")
 User.create!(email: "molly@artlantis.com", password: "123456")
 User.create!(email: "raj@artlantis.com", password: "123456")
-
+User.create!(email: "mollygao17@gmail.com", password: "123456")
 # CREATE 2 FAKE USERS
 2.times do
   User.create!(email: Faker::Internet.email, password: "123456")
@@ -19,13 +19,13 @@ end
                       description: Faker::Hipster.paragraph, location: Faker::Address.city)
   # LOAD A RANDOM ART IMAGE FROM UNSPLASH
   artist_image = URI.open("https://source.unsplash.com/random/640x960/?artist")
-  # ATTACH THE IMAGE (.images instead of .image since we use
-  # has_many_attached in the model)
+  # ATTACH THE IMAGE (.image instead of .images since we use
+  # has_one_attached in the model)
   artist.image.attach(io: artist_image, filename: 'artist.jpg')
   artist.save!
   # CREATE 5 ARTWORKS FOR EACH ARTIST
   5.times do
-    art = Art.new(cost: rand(10..100), location: Faker::Address.city, description: Faker::Hipster.paragraph,
+    art = Art.new(cost: rand(10..100), name: Faker::Hipster.words(number: 3).join(" "), location: Faker::Address.city, description: Faker::Hipster.paragraph,
                   artist_id: artist.id, category: Faker::Hipster.word)
     # LOAD A RANDOM ART IMAGE FROM UNSPLASH
     image = URI.open("https://source.unsplash.com/random/640x960/?art")

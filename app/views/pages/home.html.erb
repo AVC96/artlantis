@@ -13,10 +13,15 @@
 <h2>This week's top picks</h2>
 <%# how do I change the image? %>
 <div class="cards">
-  <div class="card" style="background-image: url(https://res.cloudinary.com/dvqgz2ewl/image/upload/v1644672621/art_4_v9rqim.jpg)">
-  </div>
-  <div class="card" style="background-image: url(https://res.cloudinary.com/dvqgz2ewl/image/upload/v1644672617/art_5_qqsonx.jpg)">
-  </div>
-  <div class="card" style="background-image: url(https://res.cloudinary.com/dvqgz2ewl/image/upload/v1644672614/art_6_ipkqs5.jpg)">
-  </div>
+  <% @arts.each do |art| %>
+    <div class="col-4">
+      <div class="m-3">
+        <div class="art_text">
+          <%= link_to  art_path(art) do %>
+            <%= cl_image_tag art.images[0].key, class: 'card-artwork' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
