@@ -1,6 +1,17 @@
-<div class="banner d-flex justify-content-center flex-column">
-  <div class="container justify-content-center d-flex flex-column text-center">
-    <%= image_tag "background.jpeg", alt: "Le Wagon", class:"rounded mx-auto d-block img-fluid w-80" %>
-    <div class="title_box">
-      <h1>Artlantis</h1>
+<%# # PE show this %>
+<%= @artist.name %>
+
+<%# ONE ARTISTS MANY ARTWORKS TAXONOMY%>
+<% @artist.arts.each do |art| %>
+<%# <%= art.cost %>
+  <div class="col-4">
+    <div class="m-3">
+      <%= cl_image_tag art.images[0].key, class: 'card-artwork' %>
+      <div class="art_text">
+        <p><%= art.name%></p>
+        <p><%= link_to "learn more", art_path(art)%></p>
+      </div>
     </div>
+  </div>
+<% end %>
+<%# seems like faker does not generate a name for the artworks - db rerun after you fix it %>
