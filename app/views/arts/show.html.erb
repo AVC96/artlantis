@@ -4,25 +4,26 @@
     <div class="title_box">
       <h1>Artlantis | <%= @art.name %></h1>
     </div>
+
     <div class="show-container">
-      <div class="art-border-container">
-        <div>
-          <%= cl_image_tag @art.images[0].key %>
-        </div>
-        <div class="art_text">
+      <%= cl_image_tag @art.images[0].key %>
+
+      <div class="title_box">
         <br>
+
         <div class="artist-details">
           <h3 style= "margin-right:100px;"><%= @artist.name%></h3>
           <br>
           <h3><%= cl_image_tag @artist.image.key, class: "avatar-artist" %></h3>
         </div>
-          <h3><%= @art.description %></h3>
-          <h3><%= @art.category %></h3>
-          <h3><%= @art.location %></h3>
-          <h3><%= @art.image %></h3>
-          <h3>£<%= @art.cost %></h3>
-        </div>
+
+        <p><%= @art.description %> <%= @art.category %></p>
+        <br>
+        <p>Location: <%= @art.location %></p>
+        <%# <%= @art.image %>
+        <p> Price: £<%= @art.cost %> </p>
       </div>
+      <%# </div> %>
     </div>
   </div>
 </div>
