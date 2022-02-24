@@ -7,6 +7,7 @@ class ArtsController < ApplicationController
 
   def show
     @art = Art.find(params[:id])
+    @artist = @art.artist
   end
 
   def new
@@ -31,4 +32,5 @@ class ArtsController < ApplicationController
   def find_art
     @art = Art.find(params[:id])
   end
+
 end
