@@ -1,0 +1,34 @@
+<%# # PE show this %>
+
+<%# ARTISTE NAME AND AVATAR %>
+<br>
+
+<div class="intro-product">
+  <%= cl_image_tag @artist.image.key, class: "avatar-large" %>
+  <div class="title_box">
+    <h1><%= @artist.name %></h1>
+    <br>
+    <p><%= @artist.bio %></p>
+  </div>
+</div>
+
+<%# ARTIST DESCRIPTION %>
+
+
+<%# ONE ARTISTS MANY ARTWORKS TAXONOMY%>
+<div class="art-container">
+  <div class="column">
+    <div class="row">
+      <% @artist.arts.each do |art| %>
+        <div class="art_text">
+          <div class="m-3">
+            <%= cl_image_tag art.images[0].key, class: 'card-artwork' %>
+            <p><%= art.name%></p>
+            <p><%= link_to "check it out", art_path(art)%></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%# seems like faker does not generate a name for the artworks - db rerun after you fix it %>

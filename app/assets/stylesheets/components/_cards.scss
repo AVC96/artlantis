@@ -5,3 +5,22 @@
   padding: 16px;
   height: 400px;
 }
+
+.card-artwork {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  vertical-align: top;
+
+}
+
+.intro-product {
+ position: relative;
+  width: 1000px;
+  min-width: 350px;
+  min-height: 500px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
