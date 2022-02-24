@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   devise_for :users
   # ROUTES FOR ARTWORKS
   resources :arts
+  # routes for artists
+  resources :artists
 end
