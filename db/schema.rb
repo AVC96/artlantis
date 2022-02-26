@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_26_152555) do
+ActiveRecord::Schema.define(version: 2022_02_19_120447) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,19 @@ ActiveRecord::Schema.define(version: 2022_02_26_152555) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "bids", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "auction_id"
+    t.bigint "price"
+  end
+
+  create_table "auctions", force: :cascade do |t|
+    t.bigint "art_id"
+    t.bigint "artist_id"
+    t.bigint "start_end_time"
+  end
+
+
   create_table "arts", force: :cascade do |t|
     t.integer "cost"
     t.string "location"
@@ -63,18 +76,6 @@ ActiveRecord::Schema.define(version: 2022_02_26_152555) do
     t.string "category"
     t.string "name"
     t.index ["artist_id"], name: "index_arts_on_artist_id"
-  end
-
-  create_table "bids", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "art_id", null: false
-    t.integer "price"
-    t.datetime "start_time"
-    t.datetime "end_time"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["art_id"], name: "index_bids_on_art_id"
-    t.index ["user_id"], name: "index_bids_on_user_id"
   end
 
   create_table "favourites", force: :cascade do |t|
@@ -101,8 +102,6 @@ ActiveRecord::Schema.define(version: 2022_02_26_152555) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "arts", "artists"
-  add_foreign_key "bids", "arts"
-  add_foreign_key "bids", "users"
   add_foreign_key "favourites", "arts"
   add_foreign_key "favourites", "users"
 end
