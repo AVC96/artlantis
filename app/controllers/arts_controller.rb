@@ -8,6 +8,7 @@ class ArtsController < ApplicationController
   def show
     @art = Art.find(params[:id])
     @artist = @art.artist
+    @sim_art_category = Art.where(category: @art.category).sample(4)
   end
 
   def new
