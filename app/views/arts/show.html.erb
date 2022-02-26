@@ -12,7 +12,8 @@
         <br>
 
         <div class="artist-details">
-          <h3 style= "margin-right:100px;"><%= @artist.name%></h3>
+          <h3 style= "margin-right:100px;"><%= link_to @artist.name, artist_path(@artist) %></h3>
+
           <br>
           <h3><%= cl_image_tag @artist.image.key, class: "avatar-artist" %></h3>
         </div>

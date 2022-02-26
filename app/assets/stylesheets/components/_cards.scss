@@ -7,9 +7,14 @@
 }
 
 .card-artwork {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
+  vertical-align: top;
+}
+
+.card-artist-show-art {
+  // width: 100%;
   vertical-align: top;
 }
 

@@ -22,7 +22,7 @@
       <% @artist.arts.each do |art| %>
         <div class="art_text">
           <div class="m-3">
-            <%= cl_image_tag art.images[0].key, class: 'card-artwork' %>
+            <%= cl_image_tag art.images[0].key,width: 500, height: 500, class: 'card-artist-show-art' %>
             <p><%= art.name%></p>
             <p><%= link_to "check it out", art_path(art)%></p>
           </div>
