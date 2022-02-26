@@ -7,14 +7,11 @@
 }
 
 .card-artwork {
-  // display: grid;
-  // grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
   vertical-align: top;
 }
 
 .card-artist-show-art {
-  // width: 100%;
   vertical-align: top;
 }
 
@@ -48,23 +45,16 @@
 }
 
 .art-show-description {
-  // width: 100%;
-  // text-align:left;
-  background: red;
+  margin-top: 16px;
   margin-bottom: 16px;
   border-bottom: 2px solid white;
 }
 
 .artist-details {
-//   width: 100%;
-  // display: flex;
-  background: blue;
-//   justify-content: flex-end;
   align-items: center;
 }
 
 .artcard-details {
-  background:green;
   width: 800px;
   margin-left: 32px;
 }

@@ -1,16 +1,29 @@
-.btn-primary {
-  color: $white;
-  border-color: $white;
-  margin-bottom: 5px;
-}
+// .btn-primary {
+//   color: $white;
+//   border-color: $white;
+//   margin-bottom: 5px;
+// }
 
-.btn-sm {
-  background-color: $white;
-  display: inline-block;
-}
+// .btn-sm {
+//   background-color: $white;
+//   display: inline-block;
 
-.btn-error {
+
+// .btn-error {
+//   color: white;
+//   background-color: red;
+//   padding: 8px 24px;
+// }
+
+.button {
+  padding: 10px 15px;
+  border-radius: 4px;
   color: white;
-  background-color: red;
-  padding: 8px 24px;
+  border: 1px solid white;
+}
+
+.button:hover {
+  background-color: lightblue;
+  text-decoration: none;
+  color: white;
 }
