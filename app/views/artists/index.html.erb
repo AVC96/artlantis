@@ -3,21 +3,29 @@
     <%= image_tag "background.jpeg", alt: "Le Wagon", class:"rounded mx-auto d-block img-fluid w-80" %>
     <div class="title_box">
       <h1>Artlantis | Artists</h1>
+      <form action="/artist_search">
+        <input type="text" id="search" name="search">
+        <input type="submit" value="Search" class="button">
+      </form>
     </div>
     <div class="art-container">
-      <div class="row">
-        <% @artists.each do |artist| %>
-          <div class="col-4">
-            <div class="m-3">
-              <%= cl_image_tag artist.arts.first.images[0].key, class: 'card-artwork' %>
-              <div class="art_text">
-                <p><%= link_to artist.name, artist_path(artist)%></p>
-                <p><%= artist.location%></p>
+      <% if @artists %>
+        <div class="row">
+          <% @artists.each do |artist| %>
+            <div class="col-4">
+              <div class="m-3">
+                <%= cl_image_tag artist.arts.first.images[0].key, class: 'card-artwork' %>
+                <div class="art_text">
+                  <p><%= link_to artist.name, artist_path(artist)%></p>
+                  <p><%= artist.location%></p>
+                </div>
               </div>
             </div>
-          </div>
-        <% end %>
-      </div>
+          <% end %>
+        </div>
+      <% else %>
+        <h3>Unfortunately your search returned no results! Try again.</h3>
+      <% end %>
     </div>
   </div>
 </div>
