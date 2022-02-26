@@ -52,6 +52,19 @@ ActiveRecord::Schema.define(version: 2022_02_19_120447) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "bids", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "auction_id"
+    t.bigint "price"
+  end
+
+  create_table "auctions", force: :cascade do |t|
+    t.bigint "art_id"
+    t.bigint "artist_id"
+    t.bigint "start_end_time"
+  end
+
+
   create_table "arts", force: :cascade do |t|
     t.integer "cost"
     t.string "location"

@@ -1,0 +1,23 @@
+<div class="banner d-flex justify-content-center flex-column">
+  <div class="container justify-content-center d-flex flex-column text-center">
+    <%= image_tag "background.jpeg", alt: "Le Wagon", class:"rounded mx-auto d-block img-fluid w-80" %>
+    <div class="title_box">
+      <h1>Artlantis | Artists</h1>
+    </div>
+    <div class="art-container">
+      <div class="row">
+        <% @artists.each do |artist| %>
+          <div class="col-4">
+            <div class="m-3">
+              <%= cl_image_tag artist.arts.first.images[0].key, class: 'card-artwork' %>
+              <div class="art_text">
+                <p><%= link_to artist.name, artist_path(artist)%></p>
+                <p><%= artist.location%></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
