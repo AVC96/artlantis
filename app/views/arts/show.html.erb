@@ -1,30 +1,38 @@
-<div class="banner d-flex justify-content-center flex-column">
+<%# <div class="banner d-flex justify-content-center flex-column">
   <div class="container justify-content-center d-flex flex-column text-center">
     <%= image_tag "background.jpeg", alt: "Le Wagon", class:"rounded mx-auto d-block img-fluid w-80" %>
-    <div class="title_box">
+    <div class="title_box text-center" >
       <h1>Artlantis | <%= @art.name %></h1>
     </div>
 
     <div class="show-container">
-      <%= cl_image_tag @art.images[0].key %>
+      <%= cl_image_tag @art.images[0].key, width: 700, height: 400 %>
 
-      <div class="title_box">
-        <br>
-
+      <div class="artcard-details">
         <div class="artist-details">
-          <h3 style= "margin-right:100px;"><%= link_to @artist.name, artist_path(@artist) %></h3>
-
-          <br>
-          <h3><%= cl_image_tag @artist.image.key, class: "avatar-artist" %></h3>
+          <h3><%= link_to @artist.name, artist_path(@artist) %></h3>
         </div>
 
-        <p><%= @art.description %> <%= @art.category %></p>
-        <br>
-        <p>Location: <%= @art.location %></p>
-        <%# <%= @art.image %>
-        <p> Price: £<%= @art.cost %> </p>
+        <div class="art-show-description">
+          <p><%= @art.description %></p>
+          <p><%= @art.category %></p>
+          <p>Location: <%= @art.location %></p>
+          <%# <%= @art.image %>
+          <p> Price: £<%= @art.cost %> </p>
+        </div>
+
+        <div class="bid-area">
+          <div class="bid-text">
+            <p>Open price</p>
+            <p>Closing date</p>
+            <p>Location</p>
+          </div>
+          <div class="button" >
+           <a> Make a bid </a>
+          </div>
+        </div>
       </div>
       <%# </div> %>
     </div>
-  </div>
-</div>
+  <%# </div>
+</div> %>

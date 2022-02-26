@@ -30,12 +30,51 @@
 }
 
 .show-container {
-  position: relative;
-  width: 1000px;
-  min-width: 350px;
-  min-height: 500px;
-  height: auto;
+  width: 800px;
   display: flex;
-  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 32px
+}
+
+.art-container {
+  p {
+    font-size: 16px;
+    color: lightblue;
+  }
+}
+
+.card-artwork {
+  width: 200px;
+}
+
+.art-show-description {
+  // width: 100%;
+  // text-align:left;
+  background: red;
+  margin-bottom: 16px;
+  border-bottom: 2px solid white;
+}
+
+.artist-details {
+//   width: 100%;
+  // display: flex;
+  background: blue;
+//   justify-content: flex-end;
   align-items: center;
+}
+
+.artcard-details {
+  background:green;
+  width: 800px;
+  margin-left: 32px;
+}
+
+.bid-area{
+  display: flex;
+}
+.bid-text {
+  width: 70%;
+}
+.bid-text p {
+  margin-bottom: 2px;
 }
