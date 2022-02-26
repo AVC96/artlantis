@@ -27,7 +27,7 @@
 }
 
 .show-container {
-  width: 800px;
+  width: 1000px;
   display: flex;
   margin: 0 auto;
   margin-bottom: 32px
@@ -63,8 +63,25 @@
   display: flex;
 }
 .bid-text {
-  width: 70%;
+  width: 75%;
 }
 .bid-text p {
   margin-bottom: 2px;
+}
+
+.card-bottom {
+  width: 200px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(230,230,230);
+  margin-top: 32px;
+}
+
+.card-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 32px;
+  margin-top: 16px;
 }
