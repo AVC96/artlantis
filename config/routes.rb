@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :arts
   # routes for artists
   resources :artists
+  get "artist_search", to: "artists#search"
 end
