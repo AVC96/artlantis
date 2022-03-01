@@ -4,7 +4,7 @@
 </div>
 
 <div class="show-container">
-  <%= cl_image_tag @art.images[0].key, width: 800, height: 600 %>
+  <%= cl_image_tag @art.images[0].key, height: 600 %>
 
   <div class="artcard-details">
     <div class="artist-details">
@@ -23,11 +23,10 @@
         <p>Location: <%= @art.location %></p>
       </div>
       <div class= "btn-container">
-        <a class="button">Make a bid</a>
+        <a class="btn btn-light">Make a bid</a>
       </div>
     </div>
-  </div>
-</div>
+ </div>
 
 <div class="other_artworks">
   <h2> See similar artworks </h2>

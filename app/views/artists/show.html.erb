@@ -6,9 +6,8 @@
 <div class="intro-product">
   <%= cl_image_tag @artist.image.key, class: "avatar-large" %>
   <div class="title_box">
-    <h1><%= @artist.name %></h1>
-    <br>
-    <p><%= @artist.bio %></p>
+    <h1 class="mb-3"><%= @artist.name %></h1>
+    <p class="mb-3"><%= @artist.bio %></p>
   </div>
 </div>
 
@@ -16,19 +15,18 @@
 
 
 <%# ONE ARTISTS MANY ARTWORKS TAXONOMY%>
-<div class="art-container">
-  <div class="column">
-    <div class="row">
-      <% @artist.arts.each do |art| %>
-        <div class="art_text">
-          <div class="m-3">
-            <%= cl_image_tag art.images[0].key,width: 500, height: 500, class: 'card-artist-show-art' %>
-            <p><%= art.name%></p>
-            <p><%= link_to "check it out", art_path(art)%></p>
-          </div>
+<div class="container">
+  <div class="row">
+    <% @artist.arts.each do |art| %>
+      <div class="col-4">
+        <div class="m-3">
+          <%= link_to  art_path(art) do %>
+            <%= cl_image_tag art.images[0].key, class: 'w-100' %>
+          <% end %>
+          <p><%= art.name%></p>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
 <%# seems like faker does not generate a name for the artworks - db rerun after you fix it %>
