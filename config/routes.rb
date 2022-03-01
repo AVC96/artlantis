@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   resources :arts
   # routes for artists
   resources :artists
+  # routes for bids
+  resources :bids
 end

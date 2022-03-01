@@ -8,6 +8,7 @@ class ArtsController < ApplicationController
   def show
     @art = Art.find(params[:id])
     @artist = @art.artist
+    @bid = Bid.find_by(art_id: params[:id], price)
   end
 
   def new
