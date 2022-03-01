@@ -8,7 +8,8 @@ class ArtsController < ApplicationController
   def show
     @art = Art.find(params[:id])
     @artist = @art.artist
-    @bid = Bid.find_by(art_id: params[:id], price)
+    # @bid = Bid.find_by(art_id: params[:id], price)
+    @sim_art_category = Art.where(category: @art.category).sample(4)
   end
 
   def new

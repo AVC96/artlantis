@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :artists
   # routes for bids
   resources :bids
+  get "artist_search", to: "artists#search"
 end

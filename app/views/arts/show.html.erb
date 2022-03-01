@@ -1,35 +1,42 @@
-<div class="banner d-flex justify-content-center flex-column">
-  <div class="container justify-content-center d-flex flex-column text-center">
-    <%= image_tag "background.jpeg", alt: "Le Wagon", class:"rounded mx-auto d-block img-fluid w-80" %>
-    <div class="title_box text-center" >
-      <h1>Artlantis</h1>
+
+<div class="title_box text-center" >
+  <h1>Artlantis</h1>
+</div>
+
+<div class="show-container">
+  <%= cl_image_tag @art.images[0].key, width: 800, height: 600 %>
+
+  <div class="artcard-details">
+    <div class="artist-details">
+      <h3><%= @art.name %> | <%= link_to @artist.name, artist_path(@artist)%></h3>
     </div>
 
-    <div class="show-container">
-      <%= cl_image_tag @art.images[0].key %>
+    <div class="art-show-description">
+      <p><%= @art.description %></p>
+      <p><%= @art.category %></p>
+    </div>
 
-      <div class="artcard-details">
-        <div class="artist-details">
-          <h3><%= @art.name %> | <%= link_to @artist.name, artist_path(@artist)%></h3>
-        </div>
-
-        <div class="art-show-description">
-          <p><%= @art.description %></p>
-          <p><%= @art.category %></p>
-        </div>
-
-        <div class="bid-area">
-          <div class="bid-text">
-            <p>Open price: £ <%= @art.cost %></p>
-            <p>Closing date: </p>
-            <p>Location: <%= @art.location %></p>
-          </div>
-          <div>
-           <a class="button"> Make a bid </a>
-          </div>
-        </div>
+    <div class="bid-area">
+      <div class="bid-text">
+        <p>Open price: £ <%= @art.cost %></p>
+        <p>Closing date: </p>
+        <p>Location: <%= @art.location %></p>
       </div>
-      <%# </div> %>
+      <div class= "btn-container">
+        <a class="button">Make a bid</a>
+      </div>
     </div>
   </div>
 </div>
+
+<div class="other_artworks">
+  <h2> See similar artworks </h2>
+  <div class= "card-holder">
+    <% @sim_art_category.each do |art| %>
+      <%= link_to  art_path(art) do %>
+        <%= cl_image_tag art.images[0].key, width: 200, height: 200 %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
