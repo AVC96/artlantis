@@ -9,11 +9,12 @@
         <% @arts.each do |art| %>
           <div class="col-4">
             <div class="m-3">
-                <%= cl_image_tag art.images[0].key, class: 'card-artwork' %>
+              <%= link_to art_path(art) do %>
+                <%= cl_image_tag art.images[0].key, class: 'card-artwork p-3 bg-light'%>
+              <% end %>
               <div class="art_text">
-                <p><%= art.name%></p>
-                <p>£<%= art.cost%></p>
-                <p><%= link_to "learn more", art_path(art)%></p>
+                <span><%= art.name%></span>
+                <span>£<%= art.cost%></span>
               </div>
             </div>
           </div>

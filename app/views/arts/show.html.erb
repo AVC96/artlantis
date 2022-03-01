@@ -33,10 +33,9 @@
   <h2> See similar artworks </h2>
   <div class= "card-holder">
     <% @sim_art_category.each do |art| %>
-      <%= link_to  art_path(art) do %>
+      <%= link_to art_path(art) do %>
         <%= cl_image_tag art.images[0].key, width: 200, height: 200 %>
       <% end %>
     <% end %>
   </div>
 </div>
-
