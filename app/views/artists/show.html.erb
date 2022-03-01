@@ -9,6 +9,7 @@
     <h1><%= @artist.name %></h1>
     <br>
     <p><%= @artist.bio %></p>
+    <br>
   </div>
 </div>
 
@@ -22,9 +23,10 @@
       <% @artist.arts.each do |art| %>
         <div class="art_text">
           <div class="m-3">
-            <%= cl_image_tag art.images[0].key,width: 500, height: 500, class: 'card-artist-show-art' %>
+            <%= link_to  art_path(art) do %>
+              <%= cl_image_tag art.images[0].key,width: 500, height: 500, class: 'card-artist-show-art' %>
+            <% end %>
             <p><%= art.name%></p>
-            <p><%= link_to "check it out", art_path(art)%></p>
           </div>
         </div>
       <% end %>
