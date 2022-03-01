@@ -6,21 +6,11 @@
   height: 400px;
 }
 
-.card-artwork {
-  width: 100%;
-  vertical-align: top;
-}
-
 .card-artist-show-art {
   vertical-align: top;
 }
 
 .intro-product {
-  position: relative;
-  width: 1000px;
-  min-width: 350px;
-  min-height: 500px;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +18,7 @@
 
 .show-container {
   display: flex;
-  margin-bottom: 32px
+  margin: 0 auto 32px;
 }
 
 .art-container {
@@ -38,9 +28,6 @@
   }
 }
 
-.card-artwork {
-  width: 200px;
-}
 
 .art-show-description {
   margin-top: 16px;
@@ -57,7 +44,7 @@
   margin-left: 32px;
 }
 
-.bid-area{
+.bid-area {
   display: flex;
 }
 .bid-text {
@@ -70,10 +57,10 @@
 .card-bottom {
   width: 200px;
   border-radius: 3px;
-  box-shadow: 0 0 5px rgb(230,230,230);
+  box-shadow: 0 0 5px rgb(230, 230, 230);
   text-align: center;
   padding: 20px;
-  border: 1px solid rgb(230,230,230);
+  border: 1px solid rgb(230, 230, 230);
   margin-top: 32px;
 }
 
