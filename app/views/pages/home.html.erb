@@ -1,24 +1,27 @@
 <div class="d-flex justify-content-center flex-column">
   <%= image_tag "background.jpeg", alt: "Le Wagon", class:"rounded mx-auto d-block img-fluid w-80" %>
-  <div class="title_box">
+  <div class="py-3 text-center m-5">
     <h1>Welcome to Artlantis</h1>
   </div>
-  <div class="simple_text">
+  <div class="text-center w-50 m-auto m-2">
     <p>A world bridging art lovers and undervalued artwork! On Artlantis you can like and collect your favourite digital art pieces. With the potential to connect with new artists.</p>
   </div>
-  <div class="browse_box">
-    <%= link_to "Browse Artlantis!", arts_path %>
+  <div class="py-3 browse_box mb-3 text-center m-5">
+    <a href="/arts" class="btn border-white p-3 mb-2 bg-dark text-white">Browse Artworks!</a>
+    <a href="/artists" class="btn border-white p-3 mb-2 bg-dark text-white">Browse Artists!</a>
   </div>
 </div>
-<h2>This week's top picks</h2>
+  <div class="text-center m-10">
+    <h2>This week's top picks</h2>
+  </div>
 <%# how do I change the image? %>
-<div class="cards">
+<div class="row mt-5">
   <% @arts.each do |art| %>
     <div class="col-4">
-      <div class="m-3">
-        <div class="art_text">
+      <div class="mt-8">
+        <div class="art_text mt-10">
           <%= link_to  art_path(art) do %>
-            <%= cl_image_tag art.images[0].key, class: 'card-artwork' %>
+            <%= cl_image_tag art.images[0].key, class: "w-100" %>
           <% end %>
         </div>
       </div>
