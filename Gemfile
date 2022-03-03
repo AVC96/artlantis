@@ -35,12 +35,13 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
+gem 'faker'
+
 
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
-  gem 'faker'
   gem 'annotate'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
