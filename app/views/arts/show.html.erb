@@ -1,21 +1,16 @@
-
 <div class="title_box text-center" >
   <h1>Artlantis</h1>
 </div>
-
 <div class="show-container">
   <%= cl_image_tag @art.images[0].key, height: 600 %>
-
   <div class="artcard-details">
     <div class="artist-details">
       <h3><%= @art.name %> | <%= link_to @artist.name, artist_path(@artist)%></h3>
     </div>
-
     <div class="art-show-description">
       <p><%= @art.description %></p>
       <p><%= @art.category %></p>
     </div>
-
     <div class="bid-area">
       <div class="bid-text">
         <p>Open price: £ <%= @art.cost %></p>
@@ -26,8 +21,8 @@
         <a class="btn btn-light">Make a bid</a>
       </div>
     </div>
- </div>
-
+  </div>
+</div>
 <div class="other_artworks">
   <h2> See similar artworks </h2>
   <div class= "card-holder">
