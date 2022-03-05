@@ -3,4 +3,8 @@ class PagesController < ApplicationController
   def home
     @arts = Art.all.sample(3)
   end
+
+  def myauctions
+    # Add temp code for showing artworks
+  end
 end

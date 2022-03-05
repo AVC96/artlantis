@@ -1,24 +1,23 @@
 <div class="banner d-flex justify-content-center flex-column">
   <div class="container justify-content-center d-flex flex-column text-center">
-    <%= image_tag "background.jpeg", alt: "Le Wagon", class:"rounded mx-auto d-block img-fluid w-80" %>
     <div class="title_box">
       <h1>Artlantis | Artists</h1>
-      <form action="/artist_search">
-        <input type="text" id="search" name="search">
-        <input type="submit" value="Search" class="button">
+      <form action="/artists" class="d-flex justify-content-center align-items-center">
+        <input type="text" id="search" name="search" class="mr-2" style="height: 40px;">
+        <input type="submit" value="Search" class="btn btn-light">
       </form>
     </div>
     <div class="art-container">
-      <% if @artists %>
+      <% if @artists.length > 0 %>
         <div class="row">
           <% @artists.each do |artist| %>
             <div class="col-4">
-              <div class="m-3">
-                <%= cl_image_tag artist.arts.first.images[0].key, class: 'card-artwork' %>
-                <div class="art_text">
-                  <p><%= link_to artist.name, artist_path(artist)%></p>
-                  <p><%= artist.location%></p>
-                </div>
+              <%= link_to artist_path(artist) do  %>
+                <%= cl_image_tag artist.image.key, class: 'card-artwork w-100 m-3' %>
+              <% end %>
+              <div class="art_text">
+                <h5><%= artist.name %></h5>
+                <p><i class="fas fa-map-marked text-white mr-2"></i><%= artist.location%></p>
               </div>
             </div>
           <% end %>

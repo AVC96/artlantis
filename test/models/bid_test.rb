@@ -3,9 +3,7 @@
 # Table name: bids
 #
 #  id         :bigint           not null, primary key
-#  end_time   :datetime
 #  price      :integer
-#  start_time :datetime
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  art_id     :bigint           not null

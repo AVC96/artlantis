@@ -10,9 +10,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   </head>
-  <body style="display: flex; flex-direction: column" id="bootstrap-override">
+  <body class="d-flex flex-column min-vh-100" id="bootstrap-override">
     <%= render 'shared/navigation' %>
-    <main class="container">
+    <main class="container py-5">
       <%= yield %>
     </main>
     <%= render 'shared/footer' %>
