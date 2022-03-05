@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_26_152555) do
+ActiveRecord::Schema.define(version: 2022_03_05_111345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 2022_02_26_152555) do
     t.bigint "artist_id"
     t.string "category"
     t.string "name"
+    t.datetime "auction_end_time"
     t.index ["artist_id"], name: "index_arts_on_artist_id"
   end
 
@@ -69,8 +70,6 @@ ActiveRecord::Schema.define(version: 2022_02_26_152555) do
     t.bigint "user_id", null: false
     t.bigint "art_id", null: false
     t.integer "price"
-    t.datetime "start_time"
-    t.datetime "end_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["art_id"], name: "index_bids_on_art_id"
