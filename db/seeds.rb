@@ -1,5 +1,6 @@
 # DESTROY ALL THE DATA
 puts "Deleting everything......"
+Bid.destroy_all
 Art.destroy_all
 Artist.destroy_all
 User.destroy_all
@@ -40,4 +41,9 @@ puts "Creating some artists..."
     art.images.attach(io: image, filename: "art.jpg")
     art.save!
   end
+end
+
+puts "Creating some bids"
+40.times do
+  Bid.create!(art: Art.all.sample, user: User.all.sample, price: rand(10..100))
 end
