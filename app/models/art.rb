@@ -29,7 +29,7 @@ class Art < ApplicationRecord
   # IMAGE ATTACHMENTS (MULTIPLE POSSIBLE WITH HAS_MANY_ATTACHED)
   has_many_attached :images
 
-  has_many :bid
+  has_many :bids
   # VALIDATIONS
   # WHICH FIELDS ARE REQUIRED FOR A SINGLE ARTWORK?
 end
