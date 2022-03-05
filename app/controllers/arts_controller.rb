@@ -8,7 +8,7 @@ class ArtsController < ApplicationController
   def show
     @art = Art.find(params[:id])
     @artist = @art.artist
-    # @bid = Bid.find_by(art_id: params[:id], price)
+    @bid = Bid.new
     @sim_art_category = Art.where(category: @art.category).sample(4)
   end
 
@@ -17,9 +17,9 @@ class ArtsController < ApplicationController
   end
 
   def create
-    @art = Art.new(art_params)
-    if @art.save!
-      redirect_to art_path(@art)
+    art = Art.new(art_params)
+    if art.save!
+      redirect_to art_path(art)
     else
       render 'new'
     end
