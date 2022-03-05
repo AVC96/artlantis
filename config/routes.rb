@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # routes for artists
   resources :artists
   # routes for bids
-
-
+  resources :my_auctions do
+    resources :bids
+  end
 end
