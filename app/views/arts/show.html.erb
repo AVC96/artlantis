@@ -18,10 +18,7 @@
         <p>Location: <%= @art.location %></p>
       </div>
       <div class= "btn-container">
-        <%= simple_form_for([@art, @bid]) do |f| %>
-          <%= f.input :price, placeholder: "enter your bid", label: false %>
-          <%= f.submit "Make a bid", class: "btn btn-light" %>
-        <% end %>
+        <a class="btn btn-light">Make a bid</a>
       </div>
     </div>
   </div>
