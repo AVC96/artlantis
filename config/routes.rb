@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   # routes for artists
   resources :artists
   # routes for bids
+
+  # route for the contents page
    get "contents", to: "pages#contents"
 end
