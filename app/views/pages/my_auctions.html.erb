@@ -1,4 +1,13 @@
-<% @bids.each do |bid| %>
-  <%= bid.price %>
-  <%= @art.name %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <% @artworks.each do |art| %>
+      <div class="col-4">
+        <strong><%= art.name %></strong>
+        <% art.bids.order(:price).each do |bid| %>
+          <em><%= "#{bid.user.email} (#{bid.price})" %></em>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= console %>
