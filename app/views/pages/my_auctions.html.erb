@@ -2,11 +2,13 @@
   <div class="row">
     <% @artworks.each do |art| %>
       <div class="col-4">
-        <strong><%= art.name %></strong>
-        <% art.bids.where(user: current_user).order(:price).each do |bid| %>
-          <em><%= "#{bid.created_at}: #{bid.price}" %></em>
-          <em><%= "#{bid.created_at}: #{bid.price}" %></em>
+        <%= link_to art_path(art) do %>
+          <%= cl_image_tag art.images[0].key, class:'w-100 p-3 bg-light'%>
         <% end %>
+        <strong><%= art.name %></strong>
+        <p>Your current bid: £<%= art.bids.where(user: current_user).order(:price).last.price %></p>
+          <%# <em><%= "#{bid.created_at}: #{bid.price}" %></em>
+          <%# <em><%= "#{bid.created_at}: #{bid.price}" %></em>
       </div>
     <% end %>
   </div>
