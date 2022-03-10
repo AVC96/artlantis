@@ -1,6 +1,7 @@
 class ArtistsController < ApplicationController
   # How to find the id associated with the artist url
   def show
+    puts params
     @artist = Artist.find(params[:id])
   end
 

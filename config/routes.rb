@@ -5,10 +5,9 @@ Rails.application.routes.draw do
   devise_for :users
   # ROUTES FOR ARTWORKS
   resources :arts do
-    resources :bids, only: :create
+    resources :bids, only: [:create,:my_auctions]
   end
   # routes for artists
   resources :artists
   # routes for bids
-  get '/my_auctions', to: 'pages#my_auctions', as: 'my_auctions'
 end

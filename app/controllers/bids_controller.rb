@@ -10,8 +10,15 @@ class BidsController < ApplicationController
       render 'arts/show', notice: "Your bid is unsucessful"
     end
   end
-
   def bid_params
     params.require(:bid).permit(:price)
+  end
+  def my_auctions
+    # Add temp code for showing artworks
+    @bids = Bid.where(user_id: current_user.id)
+    # @bid.user = current_user
+    @art = Art.where(id:params[:art_id])
+    raise
+    # @bid.art = art
   end
 end
