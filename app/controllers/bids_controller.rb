@@ -10,7 +10,6 @@ class BidsController < ApplicationController
       render 'arts/show', notice: "Your bid is unsucessful"
     end
   end
-
   def bid_params
     params.require(:bid).permit(:price)
   end
