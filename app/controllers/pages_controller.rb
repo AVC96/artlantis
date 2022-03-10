@@ -4,8 +4,8 @@ class PagesController < ApplicationController
     @arts = Art.all.sample(3)
   end
 
-  def myauctions
-    # Add temp code for showing artworks
+  def my_auctions
+    @artworks = Art.joins(:bids).where(bids: { user_id: current_user.id }).distinct
   end
 
   def contents
