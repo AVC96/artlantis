@@ -28,6 +28,12 @@
   }
 }
 
+.art-container-grid{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
 .art-show-description {
   margin-top: 16px;
   margin-bottom: 16px;
@@ -70,3 +76,8 @@
   margin-top: 16px;
   column-gap: 16px;
 }
+
+// .medium_backg {
+//  background-image: url("https://miro.medium.com/max/1400/1*ztbu4jQVFf6vxZs12OPICw.png");
+//  background-size: cover;
+// }
