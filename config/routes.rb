@@ -10,6 +10,5 @@ Rails.application.routes.draw do
   # routes for artists
   resources :artists
   # routes for bids
-
-
+  get '/my_auctions', to: 'pages#my_auctions', as: 'my_auctions'
 end
