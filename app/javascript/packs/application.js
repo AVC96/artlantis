@@ -22,9 +22,24 @@ ActiveStorage.start()
 import "bootstrap";
 
 // Internal imports, e.g:
+import { showForm } from '../show_form';
+
 // import { initSelect2 } from '../components/init_select2';
+import { initSweetalert } from '../plugins/init_sweetalert';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
+  showForm();
   // initSelect2();
+  initSweetalert('#sweet-alert-demo', {
+    title: "Yay! You've successfully Bid!"
+    text: "You'll be hearing from us soon!",
+    icon: "success"
+  }, (value) => {
+    if (value) {
+      const link = document.querySelector('#submit_bid');
+      link.click();
+    }
+  });
+
 });
