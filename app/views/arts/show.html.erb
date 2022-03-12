@@ -19,12 +19,15 @@
     <div class="bid-area">
       <div class="bid-text">
         <p>Open price: £ <%= @art.cost %></p>
+        <% if @art.bids.present? %>
+          <p>Current bid: £ <%= @art.bids.last.price %></p>
+        <% end %>
         <p>Closing date: <%= @art.auction_end_time.strftime("%m/%d/%Y") %>
         <p>Location: <%= @art.location %></p>
       </div>
       <div class= "btn-container">
         <%= simple_form_for([@art, @bid]) do |f| %>
-          <%= f.input :price, placeholder: "enter your bid", label: false %>
+          <%= f.input :price, placeholder: "enter your bid", label: false, input_html: {min: @art.cost}%>
           <%= f.submit "Make a bid", class: "btn btn-light" %>
         <% end %>
       </div>
