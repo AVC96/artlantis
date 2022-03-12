@@ -13,4 +13,9 @@ class BidsController < ApplicationController
   def bid_params
     params.require(:bid).permit(:price)
   end
+
+  def update
+    @bid =Bid.find(params[:id])
+    @bid.update(params[:bid])
+  end
 end
