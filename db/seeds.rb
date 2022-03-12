@@ -33,7 +33,7 @@ puts "Creating some artists..."
   puts "Creating art work for #{artist.name}"
   10.times do
     art = Art.new(cost: rand(10..100), name: Faker::Hipster.words(number: 3).join(" "), location: Faker::Address.city, description: Faker::Hipster.paragraph,
-                  artist_id: artist.id, category: ["Pop art", "Classical", "Contemporary", "Mosaics"].sample)
+                  artist_id: artist.id, category: ["Pop art", "Classical", "Contemporary", "Mosaics"].sample, auction_end_time: Faker::Date.forward(days: 14) )
     # LOAD A RANDOM ART IMAGE FROM UNSPLASH
     image = URI.open("https://source.unsplash.com/random/640x960/?art")
     # ATTACH THE IMAGE (.images instead of .image since we use
