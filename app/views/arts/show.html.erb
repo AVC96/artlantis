@@ -14,7 +14,7 @@
     <div class="bid-area">
       <div class="bid-text">
         <p>Open price: £ <%= @art.cost %></p>
-        <p>Closing date: </p>
+        <p>Closing date: <%= @art.auction_end_time.strftime("%m/%d/%Y") %>
         <p>Location: <%= @art.location %></p>
       </div>
       <div class= "btn-container">

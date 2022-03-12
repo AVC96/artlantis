@@ -14,11 +14,42 @@
     </div>
   <% end %>
 </div>
-<div class="text-center m-10">
+
+<%# add on a Carousel to the home page showing three random artworks which are approaching to ddl  %>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="text-center m-10 home-title">
+    <h2>Last chance to bid</h2>
+  </div>
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+      <% @arts.each_with_index do |art, index| %>
+      <%# <%= change art to closingsoon%>
+    <div class="carousel-item <%= "active" if index == 0 %> " >
+      <%= link_to art_path(art) do %>
+        <%= cl_image_tag art.images[0].key, class: "w-100 img_carousel" %>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+  <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </button>
+</div>
+<div class="text-center m-10 home-title">
+<pre> ... </pre>
   <h2>This week's top picks</h2>
 </div>
 <%# how do I change the image? %>
-<div class="row mt-5">
+<div class="homepage-row row mt-5">
   <% @arts.each do |art| %>
     <div class="col-4">
       <div class="mt-8">
