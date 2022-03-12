@@ -1,3 +1,4 @@
+<% console %>
 <div class="d-flex justify-content-center flex-column">
   <div class="py-3 text-center m-5">
     <h1>Welcome to Artlantis</h1>
@@ -25,14 +26,15 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
+
   <div class="carousel-inner">
-      <% @arts.each_with_index do |art, index| %>
+    <% @featured_art.each_with_index do |art, index| %>
       <%# <%= change art to closingsoon%>
-    <div class="carousel-item <%= "active" if index == 0 %> " >
-      <%= link_to art_path(art) do %>
-        <%= cl_image_tag art.images[0].key, class: "w-100 img_carousel" %>
-      <% end %>
-    </div>
+        <div class="carousel-item <%= "active" if index == 0 %> " >
+          <%= link_to art_path(art) do %>
+            <%= cl_image_tag art.images[0].key, class: "w-100 img_carousel" %>
+          <% end %>
+        </div>
     <% end %>
   </div>
   <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
@@ -51,14 +53,14 @@
 <%# how do I change the image? %>
 <div class="homepage-row row mt-5">
   <% @arts.each do |art| %>
-    <div class="col-4">
-      <div class="mt-8">
-        <div class="art_text mt-10">
-          <%= link_to art_path(art) do %>
-            <%= cl_image_tag art.images[0].key, class: "w-100" %>
-          <% end %>
+      <div class="col-4">
+        <div class="mt-8">
+          <div class="art_text mt-10">
+            <%= link_to art_path(art) do %>
+              <%= cl_image_tag art.images[0].key, class: "w-100" %>
+            <% end %>
+          </div>
         </div>
       </div>
-    </div>
   <% end %>
 </div>
