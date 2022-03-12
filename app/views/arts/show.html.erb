@@ -1,42 +1,54 @@
-<div class="title_box text-center" >
+<div class=“title_box text-center” >
   <h1>Artlantis</h1>
 </div>
-<div class="show-container">
+<div class=“show-container”>
   <%= cl_image_tag @art.images[0].key, height: 600 %>
-  <div class="artcard-details">
-    <div class="artist-details">
-      <h3><%= @art.name %> | <%= link_to @artist.name, artist_path(@artist)%></h3>
+  <div class=“artcard-details”>
+    <div class=“artist-details”>
+      <h2><%= @art.name %> | </h2> <span> by <%= link_to @artist.name, artist_path(@artist)%></span>
     </div>
-    <div class="art-show-description">
+    <div class=“art-show-description”>
       <p><%= @art.description %></p>
       <p><%= @art.category %></p>
-      <div class= "icon_fav">
-        <%= link_to favourites_path(param1: params[:id], param2: current_user), method: :post do %>
-          <i class= "fas fa-hand-holding-heart fa-3x"></i>
-        <% end %>
+      <div class= “icon_fav”>
+        <a href=“Favourites index” target=“_blank”>
+          <i class= “fas fa-hand-holding-heart fa-3x”></i>
+        </a>
       </div>
     </div>
-    <div class="bid-area">
-      <div class="bid-text">
-        <p>Open price: £ <%= @art.cost %></p>
-        <%# <p>Closing date: <%= @art.auction_end_time.strftime("%m/%d/%Y") %> %>
-        <p>Location: <%= @art.location %></p>
-      </div>
-      <div class= "btn-container">
-        <%= simple_form_for([@art, @bid]) do |f| %>
-          <%= f.input :price, placeholder: "enter your bid", label: false %>
-          <%= f.submit "Make a bid", class: "btn btn-light" %>
+    <div class=“bid-area”>
+      <div class=“bid-text”>
+        <p><strong> Open price: £ </strong> <%= @art.cost %></p>
+        <% if @art.bids.present? %>
+          <p>Current bid: £ <%= @art.bids.last.price %></p>
         <% end %>
+        <p> <strong> Closing date:</strong> <%= @art.auction_end_time.strftime(“%m/%d/%Y”) %></p>
+        <p><strong> Location: </strong> <%= @art.location %></p>
+      </div>
+      <div class= “btn-btn light”>
+        <button id= “bid-button” type= “button”>Make a Bid</button>
+      </div>
+      <div id= “bid-form” class= “form-container hide-bid”>
+      <p><strong> Opening price:</strong>  <%= @art.cost %></p>
+      <%= simple_form_for([@art, @bid]) do |f| %>
+        <p><strong> Delivery amount:</strong>  £ 19.99 </p>
+        <p><strong> Admin fee & Tax:</strong>  £ 50.00</p>
+        <p><strong>Bid amount:</strong> £ </p><%= f.input :price, placeholder: “enter your bid”, label: false %>
+        <div  class= “btn-container “>
+          <p id=“sweet-alert-demo” class=“btn btn-light”>Submit Bid</p>
+          <%= f.submit “Submit Bid”, class: “btn btn-light d-none”, id: “submit_bid” %>
+        </div>
+      <% end %>
       </div>
     </div>
   </div>
 </div>
-<div class="other_artworks">
+<div class=“other_artworks”>
   <h2> See similar artworks </h2>
-  <div class= "card-holder">
+  <div class= “card-holder”>
     <% @sim_art_category.each do |art| %>
       <%= link_to art_path(art) do %>
-        <%= cl_image_tag art.images[0].key, class: "w-100 similar_artwork_image" %>
+        <%= cl_image_tag art.images[0].key, class: “w-100 similar_artwork_image” %>
       <% end %>
     <% end %>
   </div>
