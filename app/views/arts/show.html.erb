@@ -5,8 +5,9 @@
   <%= cl_image_tag @art.images[0].key, height: 600 %>
   <div class="artcard-details">
     <div class="artist-details">
-      <h3><%= @art.name %> | <%= link_to @artist.name, artist_path(@artist)%></h3>
+      <h2><%= @art.name %> | </h2> <span> by <%= link_to @artist.name, artist_path(@artist)%></span>
     </div>
+
     <div class="art-show-description">
       <p><%= @art.description %></p>
       <p><%= @art.category %></p>
@@ -37,16 +38,6 @@
         </div>
       <% end %>
       </div>
-      <%# <div class="js-container container" style="top:0px !important;"></div>
-      <div style="text-align:center;margin-top:30px;position:  fixed;width:100%;height:100%;top:0px;left:0px;">
-        <div class="checkmark-circle">
-          <div class="background"></div>
-          <div class="checkmark draw"></div>
-        </div>
-        <h1>Yay!</h1>
-        <p>You successfully made a bit!</p>
-        <button class="btn btn-light" type="submit" onclick="alert('🥺🥺🥺🥺🥺\n Oh no you didn\'t!!!!!!!');">Continue browsing</button>
-      </div> %>
     </div>
   </div>
 </div>
