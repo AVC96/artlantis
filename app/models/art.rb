@@ -32,4 +32,6 @@ class Art < ApplicationRecord
   has_many :bids
   # VALIDATIONS
   # WHICH FIELDS ARE REQUIRED FOR A SINGLE ARTWORK?
+
+  has_many :favourites
 end
