@@ -1,0 +1,13 @@
+<div class="container">
+  <% @favourites.each do |favourite| %>
+    <div class="card-product">
+      <%= link_to art_path(favourite) do %>
+         <%= cl_image_tag favourite.images[0].key %>
+      <% end %>
+      <div class="card-product-infos">
+        <h2><%= favourite.name %></h2>
+        <p> <strong>Location:</strong> <%= favourite.location %>
+      </div>
+    </div>
+  <% end %>
+</div>

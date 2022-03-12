@@ -10,10 +10,12 @@ Rails.application.routes.draw do
   # routes for artists
   resources :artists
   # routes for bids
-
+  # routes for favourites
+  resources :favourites
   get '/my_auctions', to: 'pages#my_auctions', as: 'my_auctions'
- 
+
   # route for the contents page
   get "contents", to: "pages#contents"
 
+  get "favourites", to: 'pages#favourites'
 end
