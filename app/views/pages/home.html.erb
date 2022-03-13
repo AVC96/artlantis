@@ -10,53 +10,61 @@
       <p>A world bridging art lovers and undervalued artwork! On Artlantis you can like and collect your favourite digital art pieces. With the potential to connect with new artists.</p>
     </div>
   </div>
-  <div class="mb-3 text-center m-5">
-    <%= link_to arts_path do %>
-      <div class="home-btn">Browse Artworks!</div>
-    <% end %>
-    <%= link_to artists_path do %>
-      <div class="home-btn">Browse Artists!</div>
-    </div>
-  <% end %>
   <div class="main__img--container">
     <img src="file:///Users/audrey/code/AVC96/artlantis/app/assets/images/pic1.svg" alt="art_lover_icon" id="main__img">
   </div>
 </div>
 
-<%# add on a Carousel to the home page showing three random artworks which are approaching to ddl  %>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <div class="text-center m-10 home-title">
-    <h2>This week's top bids</h2>
-  </div>
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
 
-  <div class="carousel-inner">
-    <% @featured_art.each_with_index do |art, index| %>
-      <%# <%= change art to closingsoon%>
-        <div class="carousel-item <%= "active" if index == 0 %> " >
-          <%= link_to art_path(art) do %>
-            <%= cl_image_tag art.images[0].key, class: "w-100 img_carousel" %>
-          <% end %>
-        </div>
-    <% end %>
+<div class="carousel_Relative_container">
+  <%# add on a Carousel to the home page showing three random artworks which are approaching to ddl  %>
+  <div id="carouselExampleIndicators" class="carousel_slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <% @featured_art.each_with_index do |art, index| %>
+        <%# <%= change art to closingsoon%>
+          <div class="carousel-item <%= "active" if index == 0 %> " >
+            <%= link_to art_path(art) do %>
+              <%= cl_image_tag art.images[0].key, class: "w-100 img_carousel" %>
+            <% end %>
+          </div>
+      <% end %>
+    </div>
+    <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </button>
+  <div class="absolute-text">
+    <div class="text-center m-10 home-title">
+      <h2>This week's top bids</h2>
+    </div>
+  </div>
 </div>
+
+<div class="mb-3 text-center m-5">
+    <%= link_to arts_path do %>
+      <div class="home-btn">Browse Artworks!</div>
+    <% end %>
+    <%= link_to artists_path do %>
+      <div class="home-btn">Browse Artists!</div>
+    <% end %>
+</div>
+
 <div class="text-center m-10 home-title">
-<pre> ... </pre>
-  <h2>Last chance to bid</h2>
+  <pre> ... </pre>
+    <h2>Last chance to bid</h2>
 </div>
+
 <%# how do I change the image? %>
 <div class="homepage-row row mt-5">
   <% @arts.each do |art| %>

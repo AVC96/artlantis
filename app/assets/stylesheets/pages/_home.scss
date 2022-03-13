@@ -28,6 +28,16 @@
   margin: 80px 10px 10px;
 }
 
+.carousel_Relative_container{
+  position:relative
+}
+
+  .absolute-text{
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+
 .img_carousel {
   height: 600px;
   object-fit: cover;
@@ -36,6 +46,7 @@
 .homepage-row {
   margin: 0 !important;
 }
+
 .home-title h2 {
   margin: 33px 0px !important;
   background-color: lightblue;
@@ -46,12 +57,8 @@
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-
 }
 
-.absolute-text{
-    position: relative;
-}
 
 .home-btn {
   font-size: 1rem;
