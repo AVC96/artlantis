@@ -21,10 +21,21 @@
   margin: 0 auto 32px;
 }
 
+.white_container {
+  background: #c2cdd1;
+  padding: 10px 10px 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 5rem;
+  border-radius: 60px;
+  display: flex
+
+
+}
 .art-container {
   p {
     font-size: 16px;
-    color: lightblue;
+    color: #add8e6;
   }
 }
 
@@ -125,9 +136,7 @@
   padding: 16px;
 }
 
-.title_container{
-  background-color: lightgrey;
-}
+
 .content_title_box {
 color: #add8e6;
 
