@@ -32,7 +32,7 @@ document.addEventListener('turbolinks:load', () => {
   showForm();
   // initSelect2();
   initSweetalert('#sweet-alert-demo', {
-    title: "Yay! You've successfully Bid!"
+    title: "Yay! You've successfully Bid!",
     text: "You'll be hearing from us soon!",
     icon: "success"
   }, (value) => {
