@@ -5,6 +5,19 @@
   margin: 50px 10px 10px;
 }
 
+.h1_titlebox h1 {
+font-size: 4rem;
+background-color: lightgrey;
+background-image: linear-gradient(to top, #abdcec 0%, #d4e3e7 100%);
+background-size: 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color: transparent;
+-moz-text-fill-color: transparent;
+
+}
+
+
 .simple_text {
   margin: 80px 10px 10px;
 }
