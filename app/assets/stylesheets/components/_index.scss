@@ -6,3 +6,39 @@
 @import 'cards';
 @import 'footer';
 @import 'button';
+
+.search_bar{
+  width: 100%;
+  max-width: 300px;
+  background: rgb(229, 229, 253);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding:10px 20px;
+}
+.search_bar input {
+background: transparent;
+flex: 1;
+border: 0;
+outline: none;
+padding: 8.5px 8.5px;
+font-size: 15px;
+color: #fff
+
+}
+
+// ::placeholder {
+//   color: darkblue;
+// }
+
+.search_bar button fa-search {
+width: 25px;
+}
+
+.search-bar button {
+  border: 0;
+  border-radius: 70%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
