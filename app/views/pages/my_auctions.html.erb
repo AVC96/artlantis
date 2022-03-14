@@ -1,4 +1,4 @@
-<div class="container">
+<div class= "white_container">
   <% @artworks.each do |art| %>
     <div class="card-product">
       <%= link_to art_path(art) do %>
@@ -8,9 +8,6 @@
         <h2><%= art.name %></h2>
         <p>Your current bid: £ <%= art.bids.where(user: current_user).order(:price).last.price %></p>
         <p> <strong>Location:</strong> <%= art.location %>
-
-          <%# <em><%= "#{bid.created_at}: #{bid.price}" %>
-          <%# <em><%= "#{bid.created_at}: #{bid.price}" %>
       </div>
     </div>
   <% end %>
