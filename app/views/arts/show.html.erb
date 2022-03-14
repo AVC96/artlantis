@@ -12,13 +12,17 @@
       <p><%= @art.description %></p>
       <p><%= @art.category %></p>
       <div class= "icon_fav">
+      <% if !Favourite.where(art: @art, user: current_user).first %>
         <%= link_to favourites_path(param1: params[:id], param2: current_user), method: :post do %>
           <i class= "fas fa-hand-holding-heart fa-3x"></i>
         <% end %>
+      <%# else text added /  %>
+      <% end %>
       </div>
     </div>
     <div class="bid-area">
       <div class="bid-text">
+
         <p><strong> Open price: £ </strong> <%= @art.cost %></p>
         <% if @art.bids.present? %>
           <p>Current bid: £ <%= @art.bids.last.price %></p>
