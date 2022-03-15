@@ -24,11 +24,32 @@
           <p>Current bid: £ <%= @art.bids.last.price %></p>
         <% end %>
         <p> <strong> Closing date:</strong> <%= @art.auction_end_time.strftime("%m/%d/%Y") %></p>
+
+        <%# countdown timer test %>
+        <div id="clockdiv">
+        <div>
+          <span class="days"></span>
+          <div class="smalltext"><%= t(".days") %></div>
+        </div>
+        <div>
+          <span class="hours"></span>
+          <div class="smalltext"><%= t(".hours") %></div>
+        </div>
+        <div>
+          <span class="minutes"></span>
+          <div class="smalltext"><%= t(".minutes") %></div>
+        </div>
+        <div>
+          <span class="seconds"></span>
+          <div class="smalltext"><%= t(".seconds") %></div>
+        </div>
+      </div>
         <p><strong> Location: </strong> <%= @art.location %></p>
       </div>
       <div class= "btn-btn light">
         <button id= "bid-button" type= "button">Make a Bid</button>
       </div>
+      <%#countdown timer test  %>
 
       <div id= "bid-form" class= "form-container hide-bid">
       <p><strong> Opening price:</strong>  <%= @art.cost %></p>
