@@ -21,4 +21,5 @@
 class Favourite < ApplicationRecord
   belongs_to :art
   belongs_to :user
+  validates :user_id, uniqueness: {scope: :art_id, message: "This is already in your list!"}
 end
