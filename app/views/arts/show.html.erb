@@ -19,29 +19,25 @@
     </div>
     <div class="bid-area">
       <div class="bid-text">
-        <p><strong> Open price: £ </strong> <%= @art.cost %></p>
+        <p id="openprice" data-open-price= <%= @art.cost %>><strong> Open price: £ </strong> <%= @art.cost %></p>
         <% if @art.bids.present? %>
-          <p>Current bid: £ <%= @art.bids.last.price %></p>
+          <p id="currentprice" data-current-price= <%= @art.bids.last.price%> >Current bid: £ <%= @art.bids.last.price %></p>
         <% end %>
         <p> <strong> Closing date:</strong> <%= @art.auction_end_time.strftime("%m/%d/%Y") %></p>
 
         <%# countdown timer test %>
         <div id="clockdiv">
         <div>
-          <span class="days"></span>
-          <div class="smalltext"><%= t(".days") %></div>
+
         </div>
         <div>
-          <span class="hours"></span>
-          <div class="smalltext"><%= t(".hours") %></div>
+
         </div>
         <div>
-          <span class="minutes"></span>
-          <div class="smalltext"><%= t(".minutes") %></div>
+
         </div>
         <div>
-          <span class="seconds"></span>
-          <div class="smalltext"><%= t(".seconds") %></div>
+
         </div>
       </div>
         <p><strong> Location: </strong> <%= @art.location %></p>
@@ -56,7 +52,7 @@
       <%= simple_form_for([@art, @bid]) do |f| %>
         <p><strong> Delivery amount:</strong>  £ 19.99 </p>
         <p><strong> Admin fee & Tax:</strong>  £ 50.00</p>
-        <p><strong>Bid amount:</strong> £ </p><%= f.input :price, placeholder: "enter your bid", label: false %>
+        <p><strong>Bid amount:</strong> £ </p><%= f.input :price, placeholder: "enter your bid", label: false%>
         <div class= "btn-container ">
           <p id="sweet-alert-demo" class="btn btn-light">Submit Bid</p>
           <%= f.submit "Submit Bid", class: "btn btn-light d-none", id: "submit_bid" %>
