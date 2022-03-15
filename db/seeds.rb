@@ -1,6 +1,7 @@
 # DESTROY ALL THE DATA
 puts "Deleting everything......"
 Bid.destroy_all
+Favourite.destroy_all
 Art.destroy_all
 Artist.destroy_all
 User.destroy_all

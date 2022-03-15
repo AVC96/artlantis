@@ -21,6 +21,13 @@
           <li class="nav-item">
             <%= link_to "News", contents_path, class: "nav-link" %>
           </li>
+          <li class="nav-item mr-3">
+            <form action="/artists" class="d-flex justify-content-center align-items-center search_bar">
+              <input type="text" id="search" name="search" class="mr-2" style="height: 40px;">
+              <button type="submit" class="search_b"><i class="fas fa-search"></i></button>
+            </form>
+          </li>
+
           <li class="nav-item dropdown">
             <%= image_tag "https://avatars.githubusercontent.com/u/91497669?v=4", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
