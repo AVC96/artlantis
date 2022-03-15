@@ -23,13 +23,14 @@ import "bootstrap";
 
 // Internal imports, e.g:
 import { showForm } from '../show_form';
-
+import { disableButton } from '../disablebutton';
 // import { initSelect2 } from '../components/init_select2';
 import { initSweetalert } from '../plugins/init_sweetalert';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   showForm();
+  disableButton();
   // initSelect2();
   initSweetalert('#sweet-alert-demo', {
     title: "Yay! You've successfully Bid!",

@@ -1,6 +1,6 @@
 class FavouritesController < ApplicationController
   def index
-    @favourites = Favourite.all
+    @favourites = Favourite.where(user_id: current_user).order(:created_at).reverse_order
   end
 
   def show
@@ -15,6 +15,11 @@ class FavouritesController < ApplicationController
     # set_favourite_params
     @favourite = Favourite.new(set_favourite_params)
     @favourite.save!
+  end
+
+  def destroy
+    @favourite = Favourite.find(params[:id])
+    @favourite.destroy
   end
 
   private
@@ -32,4 +37,5 @@ class FavouritesController < ApplicationController
   def art_params
     params.require(:art).permit(:cost, :location, :type, :description, :image)
   end
+
 end
