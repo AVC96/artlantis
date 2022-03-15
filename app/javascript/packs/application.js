@@ -30,7 +30,7 @@ import { initSweetalert } from '../plugins/init_sweetalert';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   showForm();
-  disableButton();
+  // disableButton();
   // initSelect2();
   const button = document.querySelector('#sweet-alert-demo');
   const openPrice = parseInt(document.querySelector('#openprice').dataset.openPrice);
