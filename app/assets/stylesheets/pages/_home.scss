@@ -8,7 +8,7 @@
 .h1_titlebox h1 {
   font-size: 4rem;
   z-index: 5;
-  margin-bottom: 6rem;
+  margin-bottom: 1rem;
   background-color: lightgrey;
   background-image: linear-gradient(to top, #abdcec 0%, #d4e3e7 100%);
   background-size: 100%;
@@ -43,7 +43,7 @@ position: relative;
 }
 
 .p_titlebox {
-  margin-top: 1rem;
+  margin-bottom: 6rem;
   font-size: 2rem;
   font-weight:400;
   color: lightgrey;
