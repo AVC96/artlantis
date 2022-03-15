@@ -30,7 +30,7 @@ puts "Creating some artists..."
   artist.image.attach(io: artist_image, filename: 'artist.jpg')
   artist.save!
 
-  # CREATE 5 ARTWORKS FOR EACH ARTIST
+    # CREATE 5 ARTWORKS FOR EACH ARTIST
   puts "Creating art work for #{artist.name}"
   10.times do
     art = Art.new(cost: rand(10..100), name: Faker::Hipster.words(number: 3).join(" "), location: Faker::Address.city, description: Faker::Hipster.paragraph,
