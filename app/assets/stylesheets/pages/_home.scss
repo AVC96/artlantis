@@ -87,6 +87,8 @@ position: relative;
 .main__img--container {
   text-align: center;
   margin-top: -100px;
+  position: relative;
+  z-index: 1;
 }
 
 .main__img--container2 {
@@ -99,6 +101,7 @@ position: relative;
 #main__img {
   height: 60%;
   width: 60%;
+  z-index: 1;
 }
 
 #main__img2 {
