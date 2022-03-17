@@ -23,6 +23,7 @@ import "bootstrap";
 
 // Internal imports, e.g:
 import { showForm } from '../show_form';
+import { favouriteHand } from '../favourite_hand';
 import { disableButton } from '../disablebutton';
 // import { initSelect2 } from '../components/init_select2';
 import { initSweetalert } from '../plugins/init_sweetalert';
@@ -30,6 +31,7 @@ import { initSweetalert } from '../plugins/init_sweetalert';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   showForm();
+  favouriteHand();
   // disableButton();
   // initSelect2();
   const button = document.querySelector('#sweet-alert-demo');
