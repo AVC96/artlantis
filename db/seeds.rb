@@ -47,7 +47,7 @@ end
 audrey = Artist.new(name: "Audrey", bio: "French and american born artist, quirky style passion for popping colours. Inspired by the moon... Selenophile since birth. Located in London area, surrounded by inspiring developers of artworks.",
                     description: Faker::Hipster.paragraph, location: Faker::Address.city)
 # LOAD A RANDOM ART IMAGE FROM UNSPLASH
-artist_image = URI.open("https://source.unsplash.com/random/640x960/?artist")
+artist_image = URI.open("https://kitt.lewagon.com/placeholder/users/AVC96")
 # ATTACH THE IMAGE (.image instead of .images since we use
 # has_one_attached in the model)
 audrey.image.attach(io: artist_image, filename: 'artist.jpg')

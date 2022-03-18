@@ -5,67 +5,61 @@
   <%= cl_image_tag @art.images[0].key, height: 600 %>
   <div class="artcard-details">
     <div class="artist-details">
-      <h2><%= @art.name %> | </h2> <span> by <%= link_to @artist.name, artist_path(@artist)%></span>
+      <h2><%= @art.name %> | </h2>
+      <span> by <%= link_to @artist.name, artist_path(@artist)%></span>
     </div>
-
     <div class="art-show-description">
       <p><%= @art.description %></p>
       <p><%= @art.category %></p>
       <div class= "icon_fav">
-      <% if !Favourite.where(art: @art, user: current_user).first %>
-        <%= link_to favourites_path(param1: params[:id], param2: current_user), id: "disable_button", method: :post do %>
-          <i class= "fas fa-hand-holding-heart fa-3x"></i>
+        <% if !Favourite.where(art: @art, user: current_user).first %>
+          <%= link_to favourites_path(param1: params[:id], param2: current_user), id: "disable_button", method: :post do %>
+            <i class= "fas fa-hand-holding-heart fa-3x"></i>
+          <% end %>
+          <%# else text added /  %>
         <% end %>
-      <%# else text added /  %>
-      <% end %>
       </div>
     </div>
     <div class="bid-area">
       <div class="bid-text">
-        <p id="openprice" data-open-price= <%= @art.cost %>><strong> Open price: £ </strong> <%= @art.cost %></p>
+        <p id="openprice" data-open-price=<%= @art.cost %>><strong> Open price: £ </strong> <%= @art.cost %></p>
         <% if @art.bids.present? %>
-          <p id="currentprice" data-current-price= <%= @art.bids.last.price%> >Current bid: £ <%= @art.bids.last.price %></p>
+          <p id="currentprice" data-current-price=<%= @art.bids.last.price %> >Current bid: £ <%= @art.bids.last.price %></p>
         <% end %>
         <p> <strong> Closing date:</strong> <%= @art.auction_end_time.strftime("%m/%d/%Y") %></p>
-
         <%# countdown timer test %>
         <div id="clockdiv">
-        <div>
-
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
         </div>
-        <div>
-
-        </div>
-        <div>
-
-        </div>
-        <div>
-
-        </div>
-      </div>
         <p><strong> Location: </strong> <%= @art.location %></p>
       </div>
       <div class= "btn-btn light">
         <button id= "bid-button" type= "button">Make a Bid</button>
       </div>
       <%#countdown timer test  %>
-
       <div id= "bid-form" class= "form-container hide-bid">
-      <p><strong> Opening price:</strong>  <%= @art.cost %></p>
-      <%= simple_form_for([@art, @bid]) do |f| %>
-        <p><strong> Delivery amount:</strong>  £ 19.99 </p>
-        <p><strong> Admin fee & Tax:</strong>  £ 50.00</p>
-        <p><strong>Bid amount:</strong> £ </p><%= f.input :price, placeholder: "enter your bid", label: false%>
-        <div class= "btn-container ">
-          <p id="sweet-alert-demo" class="btn btn-light">Submit Bid</p>
-          <%= f.submit "Submit Bid", class: "btn btn-light d-none", id: "submit_bid" %>
-        </div>
-      <% end %>
+        <p><strong> Opening price:</strong>  £<%= @art.cost %></p>
+        <%= simple_form_for([@art, @bid]) do |f| %>
+          <p><strong> Delivery amount:</strong>  £ 19.99 </p>
+          <p><strong> Admin fee & Tax:</strong>  £ 50.00</p>
+          <p><strong>Bid amount:</strong> £ </p>
+          <%= f.input :price, placeholder: "enter your bid", label: false%>
+          <div class= "btn-container ">
+            <p id="sweet-alert-demo" class="btn btn-light">Submit Bid</p>
+            <%= f.submit "Submit Bid", class: "btn btn-light d-none", id: "submit_bid" %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
-
 <div class="other_artworks">
   <h2> See similar artworks </h2>
   <div class= "card-holder">

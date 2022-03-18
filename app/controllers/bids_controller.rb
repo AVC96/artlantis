@@ -4,8 +4,7 @@ class BidsController < ApplicationController
     art = Art.find(params[:art_id])
     bid.art = art
     bid.user = current_user
-    bid.save
-    redirect_to art_path(art)
+    redirect_to art_path(art) if bid.save
   end
 
   def bid_params
