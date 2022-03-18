@@ -44,11 +44,6 @@ puts "Creating some artists..."
   end
 end
 
-puts "Creating some bids"
-40.times do
-  Bid.create!(art: Art.all.sample, user: User.all.sample, price: rand(10..100))
-end
-
 audrey = Artist.new(name: "Audrey", bio: "French and american born artist, quirky style passion for popping colours. Inspired by the moon... Selenophile since birth. Located in London area, surrounded by inspiring developers of artworks.",
                     description: Faker::Hipster.paragraph, location: Faker::Address.city)
 # LOAD A RANDOM ART IMAGE FROM UNSPLASH
@@ -67,6 +62,12 @@ audrey.save!
   # has_many_attached in the model)
   art.images.attach(io: image, filename: "art.jpg")
   art.save!
+end
+
+puts "Creating some bids"
+40.times do
+  artwork = Art.all.sample
+  Bid.create!(art: artwork, user: User.all.sample, price: artwork.cost + rand(10..50))
 end
 
 art = Art.new(cost: rand(10..100), name: "My first lullaby", location: "London, UK", description: "painted in my mom's garden on a beautiful winter day. It was raining. This is a sustainable art piece, rain was used in substitution to tap water for brushes.",
