@@ -27,12 +27,9 @@
               <button type="submit" class="search_b"><i class="fas fa-search"></i></button>
             </form>
           </li>
-
           <li class="nav-item dropdown">
             <%= image_tag "https://avatars.githubusercontent.com/u/91497669?v=4", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%#= link_to "Action", "#", class: "dropdown-item" %>
-              <%#= link_to "Another action", "#", class: "dropdown-item" %>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <%= link_to "Home page", root_path, class: "dropdown-item text" %>
               <%= link_to "My Auctions", my_auctions_path, class: "dropdown-item text" %>
               <%= link_to "Favourites", favourites_path, class: "dropdown-item text" %>
