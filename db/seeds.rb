@@ -72,7 +72,7 @@ end
 art = Art.new(cost: rand(10..100), name: "My first lullaby", location: "London, UK", description: "painted in my mom's garden on a beautiful winter day. It was raining. This is a sustainable art piece, rain was used in substitution to tap water for brushes.",
               artist_id: audrey.id, category: ["Pop art", "Classical", "Contemporary", "Mosaics"].sample, auction_end_time: Faker::Date.forward(days: 14) )
 # LOAD A RANDOM ART IMAGE FROM UNSPLASH
-image = URI.open("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/translucent-shell-brian-dahlen.jpg")
+image = URI.open("https://res.cloudinary.com/drxlrmav3/image/upload/v1647556546/lullaby_wqa2ns.png")
 # ATTACH THE IMAGE (.images instead of .image since we use
 # has_many_attached in the model)
 art.images.attach(io: image, filename: "art.jpg")
@@ -81,7 +81,7 @@ art.save!
 art2 = Art.new(cost: rand(10..100), name: "On the Wagon", location: "Paris, France", description: "Yet again, here we are. But are we? We're not. This art piece is meant to remind you of all the late nights on rails with Ruby, my dear Ruby. My ruby can be your ruby, she's often on le wagon of the rails.",
               artist_id: audrey.id, category: ["Pop art", "Classical", "Contemporary", "Mosaics"].sample, auction_end_time: Faker::Date.forward(days: 14) )
 # LOAD A RANDOM ART IMAGE FROM UNSPLASH
-image2 = URI.open("https://miro.medium.com/max/1200/1*4NOuRJAXpull9polV9vcyg.png")
+image2 = URI.open("https://res.cloudinary.com/drxlrmav3/image/upload/v1647556544/wagon_xuxcm8.png")
 # ATTACH THE IMAGE (.images instead of .image since we use
 # has_many_attached in the model)
 art2.images.attach(io: image2, filename: "art.jpg")
